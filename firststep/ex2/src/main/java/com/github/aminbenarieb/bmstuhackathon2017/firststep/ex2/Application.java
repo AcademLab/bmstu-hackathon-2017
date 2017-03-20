@@ -1,6 +1,6 @@
 package com.github.aminbenarieb.bmstuhackathon2017.firststep.ex2;
 
-import com.github.aminbenarieb.bmstuhackathon2017.firststep.ex2.сonverters.IntegerConverter;
+import static com.github.aminbenarieb.bmstuhackathon2017.firststep.ex2.сonverters.IntegerConverter.reverse;
 import java.util.Scanner;
 
 public class Application {
@@ -14,9 +14,7 @@ public class Application {
         for (int i=0; i<n; i++) {
             int first = scanner.nextInt();
             int second = scanner.nextInt();
-            results[i] = IntegerConverter.reverse(
-                    IntegerConverter.reverse(first) +
-                            IntegerConverter.reverse(second));
+            results[i] = reverse(reverse(first) + reverse(second));
         }
 
         for (int i: results)
