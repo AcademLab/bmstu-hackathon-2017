@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Dispatch
 
 struct Glass {
 	var index : Int
@@ -26,54 +27,63 @@ func drinkFromGlass(glass : Glass, inQueue drinkQueue : DispatchQueue, competiti
 	}
 }
 
-// Пытаемся перевести, что говорят иноплянетяне
-guard let rawInput = readLine(),
-	   let poisonedGlassNumber = Int(rawInput),
-	poisonedGlassNumber > 1 && poisonedGlassNumber < 11
-	else
-{
-		print("Invalid number.")
-		abort()
-}
-
-// Наливаем жидкость в стаканы
-var glasses = [Glass]()
-for glassIdx in 0..<10 {
-	glasses.append(Glass(index: glassIdx, isPoisoned: false))
-}
-
-// Отправляем нужный стакан
-glasses[poisonedGlassNumber - 1].isPoisoned = true
-
-// Пьем стаканы каждый час/10 мин/... и засекаем время
-let drinkAffectQueue = DispatchQueue(label: "com.aminbenarieb.drinkAffectQueue",
-                                     qos: .userInitiated)
-let drinkQueueGroup = DispatchGroup()
-for glassIdx in 0..<10
-{
-	var firstDrink = glassIdx == 0 ? 0 : 1
-	sleep(UInt32(kGlassDrinkInterval * firstDrink))
-	if (isDead)
-	{
-		break
+func main() {
+	guard #available(OSX 10.10, *)
+		else {
+			return
 	}
 	
-	drinkFromGlass(glass: glasses[glassIdx], inQueue: drinkAffectQueue, competition:
+	// Пытаемся перевести, что говорят иноплянетяне
+	guard let rawInput = readLine(),
+		   let poisonedGlassNumber = Int(rawInput),
+		poisonedGlassNumber > 1 && poisonedGlassNumber < 11
+		else
+	{
+			print("Invalid number.")
+			abort()
+	}
+
+	// Наливаем жидкость в стаканы
+	var glasses = [Glass]()
+	for glassIdx in 0..<10 {
+		glasses.append(Glass(index: glassIdx, isPoisoned: false))
+	}
+
+	// Отправляем нужный стакан
+	glasses[poisonedGlassNumber - 1].isPoisoned = true
+
+	// Пьем стаканы каждый час/10 мин/... и засекаем время
+	let drinkAffectQueue = DispatchQueue(label: "com.aminbenarieb.drinkAffectQueue",
+										 qos: .default)
+	for glassIdx in 0..<10
+	{
+		let firstDrink = glassIdx == 0 ? 0 : 1
+		sleep(UInt32(kGlassDrinkInterval * firstDrink))
+		if (isDead)
 		{
-			(glass) in
-			
-			let logPrefix = "[Прошло 10 часов с момента пития из стакана под номером \(glassIdx+1)]. "
-			
-			if (glass.isPoisoned)
+			break
+		}
+		
+		drinkFromGlass(glass: glasses[glassIdx], inQueue: drinkAffectQueue, competition:
 			{
-				isDead = true
-				drinkAffectQueue.suspend()
-				print(logPrefix+"Ооо нет, кажется отра.... x_X")
-			}
-			else {
-				print(logPrefix + "Фух, стакан под номером \(glassIdx+1) не содержит яда!")
-			}
-	})
+				(glass) in
+				
+				let logPrefix = "[Прошло 10 часов с момента пития из стакана под номером \(glassIdx+1)]. "
+				
+				if (glass.isPoisoned)
+				{
+					isDead = true
+					drinkAffectQueue.suspend()
+					print(logPrefix+"Ооо нет, кажется отра.... x_X")
+				}
+				else {
+					print(logPrefix + "Фух, стакан под номером \(glassIdx+1) не содержит яда!")
+				}
+		})
+	}
+
+	_ = readLine()
+
 }
 
-_ = readLine()
+main();
