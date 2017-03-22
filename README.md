@@ -1,4 +1,4 @@
-# bmstu-hackathon
+# bmstu-hackathon-2017
 
 Это репозиторий для хакатона "BMSTU Hackathon 2017".
 
