@@ -7,3 +7,15 @@
 /firststep/ex2/gradlew
 /firststep/ex2/gradlew.bat
 /firststep/ex2/gradle/*
+
+
+
+/secondstep/profiles-api/.idea/*
+
+/secondstep/profiles-api/.gradle/*
+/secondstep/profiles-api/build/*
+/secondstep/profiles-api/out/*
+
+/secondstep/profiles-api/gradlew
+/secondstep/profiles-api/gradlew.bat
+/secondstep/profiles-api/gradle/*
