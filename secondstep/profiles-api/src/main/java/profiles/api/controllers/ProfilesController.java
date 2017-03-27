@@ -8,7 +8,7 @@ import profiles.api.services.ProfilesService;
 @RestController
 public class ProfilesController {
 
-    @RequestMapping(value = "/", method = RequestMethod.POST)
+    @RequestMapping(value = "/getProfile", method = RequestMethod.POST)
     public Profile getProfile(@RequestBody UserInfo userInfo) {
         ProfilesService service = new ProfilesService();
         return service.getProfile();
