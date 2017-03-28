@@ -1,0 +1,6 @@
+framework module Pods_HuaweiCliendTests {
+  umbrella header "Pods-HuaweiCliendTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

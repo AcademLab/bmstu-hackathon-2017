@@ -1,0 +1,624 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E3924A2C9D42759201F0F6EC /* Pods_HuaweiCliendTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7D1A0574E692E9046378C15 /* Pods_HuaweiCliendTests.framework */; };
+		EF3803BA474A53FA7EFC22F6 /* Pods_HuaweiCliend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 401ABDA457C5238DA6B7B12A /* Pods_HuaweiCliend.framework */; };
+		FC4161461E89A8B100919384 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4161451E89A8B100919384 /* AppDelegate.swift */; };
+		FC4161481E89A8B100919384 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4161471E89A8B100919384 /* NewsViewController.swift */; };
+		FC41614D1E89A8B100919384 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC41614B1E89A8B100919384 /* Main.storyboard */; };
+		FC41614F1E89A8B100919384 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC41614E1E89A8B100919384 /* Assets.xcassets */; };
+		FC4161521E89A8B100919384 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC4161501E89A8B100919384 /* LaunchScreen.storyboard */; };
+		FC41615D1E89A8B100919384 /* HuaweiCliendTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC41615C1E89A8B100919384 /* HuaweiCliendTests.swift */; };
+		FC41616D1E89B02F00919384 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC41616C1E89B02F00919384 /* Network.swift */; };
+		FC4161711E89B42800919384 /* SignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4161701E89B42800919384 /* SignViewController.swift */; };
+		FC4161751E89B67B00919384 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4161741E89B67B00919384 /* UserProfile.swift */; };
+		FC4161791E89BE4400919384 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4161781E89BE4400919384 /* NewsViewModel.swift */; };
+		FC41617B1E89C06900919384 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC41617A1E89C06900919384 /* SignInViewModel.swift */; };
+		FC41617D1E89C0C000919384 /* SignInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC41617C1E89C0C000919384 /* SignInModel.swift */; };
+		FC4161811E89D48700919384 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4161801E89D48700919384 /* Router.swift */; };
+		FC4161831E89D6C600919384 /* JSONKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4161821E89D6C600919384 /* JSONKeys.swift */; };
+		FC4161851E89E30200919384 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4161841E89E30200919384 /* UserProfileViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FC4161591E89A8B100919384 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC41613A1E89A8B100919384 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC4161411E89A8B100919384;
+			remoteInfo = HuaweiCliend;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		127F25EA8D4F3A64DDB5B555 /* Pods-HuaweiCliendTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HuaweiCliendTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HuaweiCliendTests/Pods-HuaweiCliendTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1BEA9FBD4E7F9B4499A0A2F9 /* Pods-HuaweiCliendTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HuaweiCliendTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HuaweiCliendTests/Pods-HuaweiCliendTests.release.xcconfig"; sourceTree = "<group>"; };
+		401ABDA457C5238DA6B7B12A /* Pods_HuaweiCliend.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HuaweiCliend.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BE932210A5DC25EADE6BB1C /* Pods-HuaweiCliend.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HuaweiCliend.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HuaweiCliend/Pods-HuaweiCliend.debug.xcconfig"; sourceTree = "<group>"; };
+		933AECD11C931F87B84023FD /* Pods-HuaweiCliend.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HuaweiCliend.release.xcconfig"; path = "Pods/Target Support Files/Pods-HuaweiCliend/Pods-HuaweiCliend.release.xcconfig"; sourceTree = "<group>"; };
+		C7D1A0574E692E9046378C15 /* Pods_HuaweiCliendTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HuaweiCliendTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC4161421E89A8B100919384 /* HuaweiCliend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HuaweiCliend.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC4161451E89A8B100919384 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FC4161471E89A8B100919384 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		FC41614C1E89A8B100919384 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FC41614E1E89A8B100919384 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FC4161511E89A8B100919384 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FC4161531E89A8B100919384 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC4161581E89A8B100919384 /* HuaweiCliendTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HuaweiCliendTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC41615C1E89A8B100919384 /* HuaweiCliendTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuaweiCliendTests.swift; sourceTree = "<group>"; };
+		FC41615E1E89A8B100919384 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC41616C1E89B02F00919384 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		FC4161701E89B42800919384 /* SignViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignViewController.swift; sourceTree = "<group>"; };
+		FC4161741E89B67B00919384 /* UserProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		FC4161781E89BE4400919384 /* NewsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
+		FC41617A1E89C06900919384 /* SignInViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		FC41617C1E89C0C000919384 /* SignInModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInModel.swift; sourceTree = "<group>"; };
+		FC4161801E89D48700919384 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		FC4161821E89D6C600919384 /* JSONKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONKeys.swift; sourceTree = "<group>"; };
+		FC4161841E89E30200919384 /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FC41613F1E89A8B100919384 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF3803BA474A53FA7EFC22F6 /* Pods_HuaweiCliend.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC4161551E89A8B100919384 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3924A2C9D42759201F0F6EC /* Pods_HuaweiCliendTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9F4C48FE5A522DD94E18E14E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7BE932210A5DC25EADE6BB1C /* Pods-HuaweiCliend.debug.xcconfig */,
+				933AECD11C931F87B84023FD /* Pods-HuaweiCliend.release.xcconfig */,
+				127F25EA8D4F3A64DDB5B555 /* Pods-HuaweiCliendTests.debug.xcconfig */,
+				1BEA9FBD4E7F9B4499A0A2F9 /* Pods-HuaweiCliendTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E85B4F14C6595F0ABD86C383 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				401ABDA457C5238DA6B7B12A /* Pods_HuaweiCliend.framework */,
+				C7D1A0574E692E9046378C15 /* Pods_HuaweiCliendTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FC4161391E89A8B100919384 = {
+			isa = PBXGroup;
+			children = (
+				FC4161441E89A8B100919384 /* HuaweiCliend */,
+				FC41615B1E89A8B100919384 /* HuaweiCliendTests */,
+				FC4161431E89A8B100919384 /* Products */,
+				9F4C48FE5A522DD94E18E14E /* Pods */,
+				E85B4F14C6595F0ABD86C383 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FC4161431E89A8B100919384 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FC4161421E89A8B100919384 /* HuaweiCliend.app */,
+				FC4161581E89A8B100919384 /* HuaweiCliendTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FC4161441E89A8B100919384 /* HuaweiCliend */ = {
+			isa = PBXGroup;
+			children = (
+				FC4161451E89A8B100919384 /* AppDelegate.swift */,
+				FC4161701E89B42800919384 /* SignViewController.swift */,
+				FC4161471E89A8B100919384 /* NewsViewController.swift */,
+				FC4161841E89E30200919384 /* UserProfileViewController.swift */,
+				FC4161771E89BE2D00919384 /* ViewModels */,
+				FC4161721E89B65A00919384 /* Services */,
+				FC4161731E89B66400919384 /* Models */,
+				FC41614B1E89A8B100919384 /* Main.storyboard */,
+				FC41614E1E89A8B100919384 /* Assets.xcassets */,
+				FC4161501E89A8B100919384 /* LaunchScreen.storyboard */,
+				FC4161531E89A8B100919384 /* Info.plist */,
+			);
+			path = HuaweiCliend;
+			sourceTree = "<group>";
+		};
+		FC41615B1E89A8B100919384 /* HuaweiCliendTests */ = {
+			isa = PBXGroup;
+			children = (
+				FC41615C1E89A8B100919384 /* HuaweiCliendTests.swift */,
+				FC41615E1E89A8B100919384 /* Info.plist */,
+			);
+			path = HuaweiCliendTests;
+			sourceTree = "<group>";
+		};
+		FC4161721E89B65A00919384 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FC41616C1E89B02F00919384 /* Network.swift */,
+				FC4161821E89D6C600919384 /* JSONKeys.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		FC4161731E89B66400919384 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FC41617C1E89C0C000919384 /* SignInModel.swift */,
+				FC4161741E89B67B00919384 /* UserProfile.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		FC4161771E89BE2D00919384 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				FC4161781E89BE4400919384 /* NewsViewModel.swift */,
+				FC41617A1E89C06900919384 /* SignInViewModel.swift */,
+				FC4161801E89D48700919384 /* Router.swift */,
+			);
+			name = ViewModels;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FC4161411E89A8B100919384 /* HuaweiCliend */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC4161611E89A8B100919384 /* Build configuration list for PBXNativeTarget "HuaweiCliend" */;
+			buildPhases = (
+				7CFDC7384D6F574462DAE469 /* [CP] Check Pods Manifest.lock */,
+				FC41613E1E89A8B100919384 /* Sources */,
+				FC41613F1E89A8B100919384 /* Frameworks */,
+				FC4161401E89A8B100919384 /* Resources */,
+				5F9095F07D9207F8336DB784 /* [CP] Embed Pods Frameworks */,
+				9D308DFEC3399C1470D0DEE0 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HuaweiCliend;
+			productName = HuaweiCliend;
+			productReference = FC4161421E89A8B100919384 /* HuaweiCliend.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FC4161571E89A8B100919384 /* HuaweiCliendTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC4161641E89A8B100919384 /* Build configuration list for PBXNativeTarget "HuaweiCliendTests" */;
+			buildPhases = (
+				FCEA5C3572C82A0717A598ED /* [CP] Check Pods Manifest.lock */,
+				FC4161541E89A8B100919384 /* Sources */,
+				FC4161551E89A8B100919384 /* Frameworks */,
+				FC4161561E89A8B100919384 /* Resources */,
+				7F228E82B61696A51B98E6E9 /* [CP] Embed Pods Frameworks */,
+				C962670D19852805C399974B /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FC41615A1E89A8B100919384 /* PBXTargetDependency */,
+			);
+			name = HuaweiCliendTests;
+			productName = HuaweiCliendTests;
+			productReference = FC4161581E89A8B100919384 /* HuaweiCliendTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FC41613A1E89A8B100919384 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Amin Benarieb";
+				TargetAttributes = {
+					FC4161411E89A8B100919384 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 5P8935L6RT;
+						ProvisioningStyle = Automatic;
+					};
+					FC4161571E89A8B100919384 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 5P8935L6RT;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FC4161411E89A8B100919384;
+					};
+				};
+			};
+			buildConfigurationList = FC41613D1E89A8B100919384 /* Build configuration list for PBXProject "HuaweiCliend" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FC4161391E89A8B100919384;
+			productRefGroup = FC4161431E89A8B100919384 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FC4161411E89A8B100919384 /* HuaweiCliend */,
+				FC4161571E89A8B100919384 /* HuaweiCliendTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FC4161401E89A8B100919384 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC4161521E89A8B100919384 /* LaunchScreen.storyboard in Resources */,
+				FC41614F1E89A8B100919384 /* Assets.xcassets in Resources */,
+				FC41614D1E89A8B100919384 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC4161561E89A8B100919384 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5F9095F07D9207F8336DB784 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HuaweiCliend/Pods-HuaweiCliend-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7CFDC7384D6F574462DAE469 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7F228E82B61696A51B98E6E9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HuaweiCliendTests/Pods-HuaweiCliendTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D308DFEC3399C1470D0DEE0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HuaweiCliend/Pods-HuaweiCliend-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C962670D19852805C399974B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HuaweiCliendTests/Pods-HuaweiCliendTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FCEA5C3572C82A0717A598ED /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FC41613E1E89A8B100919384 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC41616D1E89B02F00919384 /* Network.swift in Sources */,
+				FC4161831E89D6C600919384 /* JSONKeys.swift in Sources */,
+				FC41617B1E89C06900919384 /* SignInViewModel.swift in Sources */,
+				FC4161791E89BE4400919384 /* NewsViewModel.swift in Sources */,
+				FC4161481E89A8B100919384 /* NewsViewController.swift in Sources */,
+				FC4161811E89D48700919384 /* Router.swift in Sources */,
+				FC4161461E89A8B100919384 /* AppDelegate.swift in Sources */,
+				FC41617D1E89C0C000919384 /* SignInModel.swift in Sources */,
+				FC4161751E89B67B00919384 /* UserProfile.swift in Sources */,
+				FC4161851E89E30200919384 /* UserProfileViewController.swift in Sources */,
+				FC4161711E89B42800919384 /* SignViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC4161541E89A8B100919384 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC41615D1E89A8B100919384 /* HuaweiCliendTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FC41615A1E89A8B100919384 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC4161411E89A8B100919384 /* HuaweiCliend */;
+			targetProxy = FC4161591E89A8B100919384 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FC41614B1E89A8B100919384 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC41614C1E89A8B100919384 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FC4161501E89A8B100919384 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC4161511E89A8B100919384 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FC41615F1E89A8B100919384 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FC4161601E89A8B100919384 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FC4161621E89A8B100919384 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BE932210A5DC25EADE6BB1C /* Pods-HuaweiCliend.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5P8935L6RT;
+				INFOPLIST_FILE = HuaweiCliend/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.amin.benarieb.HuaweiCliend;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		FC4161631E89A8B100919384 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 933AECD11C931F87B84023FD /* Pods-HuaweiCliend.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5P8935L6RT;
+				INFOPLIST_FILE = HuaweiCliend/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.amin.benarieb.HuaweiCliend;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		FC4161651E89A8B100919384 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 127F25EA8D4F3A64DDB5B555 /* Pods-HuaweiCliendTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 5P8935L6RT;
+				INFOPLIST_FILE = HuaweiCliendTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.amin.benarieb.HuaweiCliendTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HuaweiCliend.app/HuaweiCliend";
+			};
+			name = Debug;
+		};
+		FC4161661E89A8B100919384 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BEA9FBD4E7F9B4499A0A2F9 /* Pods-HuaweiCliendTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 5P8935L6RT;
+				INFOPLIST_FILE = HuaweiCliendTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.amin.benarieb.HuaweiCliendTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HuaweiCliend.app/HuaweiCliend";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FC41613D1E89A8B100919384 /* Build configuration list for PBXProject "HuaweiCliend" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC41615F1E89A8B100919384 /* Debug */,
+				FC4161601E89A8B100919384 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC4161611E89A8B100919384 /* Build configuration list for PBXNativeTarget "HuaweiCliend" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC4161621E89A8B100919384 /* Debug */,
+				FC4161631E89A8B100919384 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC4161641E89A8B100919384 /* Build configuration list for PBXNativeTarget "HuaweiCliendTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC4161651E89A8B100919384 /* Debug */,
+				FC4161661E89A8B100919384 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FC41613A1E89A8B100919384 /* Project object */;
+}
