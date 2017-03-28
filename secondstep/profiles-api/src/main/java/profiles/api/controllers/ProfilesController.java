@@ -2,6 +2,7 @@ package profiles.api.controllers;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+import profiles.api.exceptions.UnauthorizedException;
 import profiles.api.profile.Profile;
 import profiles.api.user.User;
 import profiles.api.services.ProfilesService;
