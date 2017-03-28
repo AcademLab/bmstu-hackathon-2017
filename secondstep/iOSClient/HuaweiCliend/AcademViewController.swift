@@ -15,12 +15,6 @@ class AcademViewController : UIViewController {
 		setup()
 	}
 	
-	static func instantiate(withClass identifier : String) -> UIViewController? {
-		let storyboard = UIStoryboard(name: "Main", bundle: nil)
-		let vc = storyboard.instantiateViewController(withIdentifier: identifier)
-		return vc
-	}
-	
 	func setup() {
 		setupGestures()
 	}

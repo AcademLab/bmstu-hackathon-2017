@@ -8,10 +8,14 @@
 
 import UIKit
 
-class MasterViewController: UITableViewController {
+fileprivate let kNewsItemCellReuseIdentifier = "Cell"
+fileprivate let kSegueIdentifierShowDetails = "showDetails"
 
-    @IBOutlet weak var fullName: UILabel!
-	var objects = ["Foo", "Bar", "Foo", "Bar", "Foo", "Bar", "Foo", "Bar"]
+class NewsViewController: AcademViewController, UITableViewDelegate, UITableViewDataSource, NewsViewModelDelegate, NewsTableViewCellDelegate {
+
+	@IBOutlet var tableView : UITableView!
+	
+	var viewModel : NewsViewModel? = AcademicNewsViewModel(model: AcademicNewsModel())
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -19,28 +23,79 @@ class MasterViewController: UITableViewController {
 
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
+		viewModel?.updateData()
+	}
+	
+	override func setup() {
+		tableView.delegate = self
+		tableView.dataSource = self
+		tableView.estimatedRowHeight = 140
+		tableView.rowHeight = UITableViewAutomaticDimension
+		
+		viewModel?.delegate = self
+		
+		title = "Company News"
+		
+	}
+	
+	// MARK: Segue
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		guard segue.identifier == kSegueIdentifierShowDetails,
+				let destinationVC = segue.destination as? NewsItemViewController,
+				let sender = sender as? UITableViewCell,
+				let indexPath = tableView.indexPath(for: sender) else {
+			return
+		}
+		
+		let newsItem = viewModel?.newsItems?[indexPath.row]
+		destinationVC.newsItemUrl = newsItem?.link
+		
 	}
 	
 	// MARK: - Table View
 
-	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-		cell.textLabel?.text = objects[indexPath.row]
+	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		let cell = tableView.dequeueReusableCell(withIdentifier: kNewsItemCellReuseIdentifier, for: indexPath) as! NewsTableViewCell
+		
+		let newsItem = viewModel?.newsItems?[indexPath.row]
+		
+		cell.titleLabel?.text = newsItem?.title
+		cell.titleLabel?.numberOfLines = 3
+		cell.detailLabel?.text = newsItem?.pubDate?.formattedDate()
+		cell.delegate = self
+		cell.url = newsItem?.link
+		
 		return cell
 	}
-
-	override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-		return true
-	}
 	
-	// MARK: - Data Source
- 
-	override func numberOfSections(in tableView: UITableView) -> Int {
+	func numberOfSections(in tableView: UITableView) -> Int {
 		return 1
 	}
 	
-	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return objects.count
+	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		return viewModel?.newsItems?.count ?? 0
+	}
+	
+	// MARK: NewsViewModelDelegate
+
+	func didFailedLoadNews(errMsg: String) {
+		showMessage(errMsg)
+	}
+	
+	func didUpdateNews(newsItems: [NewsItem]) {
+		self.tableView.reloadData()
+	}
+	
+	// MARK : NewsTableViewCellDelegate
+	
+	func presentSheet(fbSheet : UIViewController?) {
+		guard let fbSheet = fbSheet else { return }
+		
+		self.present(fbSheet, animated: true, completion: nil)
+	}
+	func presentAlert(alertVC : UIAlertController) {
+		self.present(alertVC, animated: true, completion: nil)
 	}
 
 }

@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>AlamofireRSSParser.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>KeychainSwift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,7 +37,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>280F21C6B563BF3268D453F791557CD8</key>
+		<key>00B227DED18BA79C430A2A280823E9B4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -42,7 +47,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3DE022BF2BF274C6B8EA5A6F348424F1</key>
+		<key>587EE9673B286E321A5DC65C496D7B73</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8020E18EA65F0BC356A4338030F07A4F</key>
 		<dict>
 			<key>primary</key>
 			<true/>

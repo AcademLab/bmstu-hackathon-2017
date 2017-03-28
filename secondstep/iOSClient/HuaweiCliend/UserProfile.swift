@@ -30,6 +30,7 @@ protocol UserProfileModel {
 	func deviceInfo() -> String?
 	
 	static func isAuthorized() -> Bool
+	static func clearData() throws
 	
 	func updateName(_ newName : String) throws
 	func updateSurname(_ newSurname : String) throws
@@ -68,6 +69,13 @@ class AcademicUserProfileModel : UserProfileModel {
 		}
 		
 		return true
+	}
+	static func clearData() throws {
+		for key in [kNameKey, kSurnameKey, kPatronicNameKey, kPhoneKey, kLoginKey] {
+			guard KeychainSwift().delete(key) else {
+				throw UserProfileError.unableToSave
+			}
+		}
 	}
 	
 	func updateName(_ newName : String) throws {

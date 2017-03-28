@@ -16,7 +16,6 @@ class SignViewController: AcademViewController, UITextFieldDelegate, SignInViewM
 	
 	required init(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)!
-		setup()
 	}
 	
 	override func viewDidLoad() {
@@ -31,7 +30,7 @@ class SignViewController: AcademViewController, UITextFieldDelegate, SignInViewM
 	
 	override func setup() {
 		super.setup()
-		self.viewModel = AcademSignInViewModel(model: MockSignInModel())
+		self.viewModel = AcademSignInViewModel(model: AcademSignInModel())
 		self.viewModel?.delegate = self
 	}
 	

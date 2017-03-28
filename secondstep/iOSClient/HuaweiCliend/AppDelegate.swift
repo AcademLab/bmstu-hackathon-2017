@@ -25,8 +25,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 		guard let tabVC = window?.rootViewController as? TabBarViewController else {
 			return
 		}
-		
 		AcadeomRouter.sharedInstance.tabbarController = tabVC
+		
+		try? AcademicUserProfileModel.clearData()
 	}
+	
 }
 

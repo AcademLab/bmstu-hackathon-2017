@@ -6,6 +6,7 @@ target 'HuaweiCliend' do
 
   pod 'KeychainSwift', '~> 7.0'
   pod 'Alamofire', '~> 4.1'
+  pod 'AlamofireRSSParser'
   pod 'SwiftyJSON', '~> 3.1'
 
 
