@@ -19,3 +19,15 @@
 /secondstep/profiles-api/gradlew
 /secondstep/profiles-api/gradlew.bat
 /secondstep/profiles-api/gradle/*
+
+
+
+/secondstep/places-api/.idea/*
+
+/secondstep/places-api/.gradle/*
+/secondstep/places-api/build/*
+/secondstep/places-api/out/*
+
+/secondstep/places-api/gradlew
+/secondstep/places-api/gradlew.bat
+/secondstep/places-api/gradle/*
