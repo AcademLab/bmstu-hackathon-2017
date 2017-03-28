@@ -1,6 +1,6 @@
-package profiles.api.user;
+package profiles.api.services;
 
-public class User {
+public class Login {
 
     private String login;
     private String password;

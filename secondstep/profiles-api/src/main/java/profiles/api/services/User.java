@@ -1,17 +1,35 @@
-package profiles.api.profile;
+package profiles.api.services;
 
-public class Profile {
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class User {
+
+    @Id
+    private String login;
+    private String password;
 
     private String name;
     private String surname;
     private String patronicName;
+
     private String phone;
 
-    public Profile() {
-        name = "Default";
-        surname = "Default";
-        patronicName = "Default";
-        phone = "+7 (999) 990 19 96";
+    public void setLogin(String str) {
+        login = str;
+    }
+
+    public String getLogin() {
+        return login;
+    }
+
+    public void setPassword(String str) {
+        password = str;
+    }
+
+    public String getPassword() {
+        return password;
     }
 
     public void setName(String str) {
