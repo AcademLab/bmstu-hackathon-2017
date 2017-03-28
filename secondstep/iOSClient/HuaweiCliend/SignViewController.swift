@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SignViewController: UIViewController, UITextFieldDelegate, SignInViewModelDelegate {
+class SignViewController: AcademViewController, UITextFieldDelegate, SignInViewModelDelegate {
 	
 	@IBOutlet weak var loginField: UITextField!
 	@IBOutlet weak var passwordField: UITextField!
@@ -21,8 +21,6 @@ class SignViewController: UIViewController, UITextFieldDelegate, SignInViewModel
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
-		setupGestures()
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
@@ -31,16 +29,10 @@ class SignViewController: UIViewController, UITextFieldDelegate, SignInViewModel
 	
 	// MARK : Setup (TEMP)
 	
-	func setup() {
-		self.viewModel = AcademSignInViewModel(model: AcademSignInModel())
+	override func setup() {
+		super.setup()
+		self.viewModel = AcademSignInViewModel(model: MockSignInModel())
 		self.viewModel?.delegate = self
-	}
-	
-	// MARK: Gesturns
-	
-	func setupGestures() {
-		let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-		self.view.addGestureRecognizer(tap)
 	}
 	
 	// MARK : Actions
@@ -68,27 +60,9 @@ class SignViewController: UIViewController, UITextFieldDelegate, SignInViewModel
 	
 	func didFailAuth(errorMsg: String) {
 		showMessage(errorMsg)
-		
 	}
 	
-	// MARK: Keyboard
-	
-	@objc fileprivate func dismissKeyboard() {
-		self.view.endEditing(true)
-	}
-	
-	// MARK: Message
-	
-	func showMessage(_ msg : String) {
-		let alertController = UIAlertController(title: "",
-		                                        message: msg,
-		                                        preferredStyle: .alert)
-		let defaultAction = UIAlertAction(title: "OK", style: .default) {
-			(result : UIAlertAction) -> Void in
-		}
-		
-		alertController.addAction(defaultAction)
-		
-		present(alertController, animated: true, completion: nil)
+	func didSuccess() {
+		self.dismiss(animated: true, completion: nil)
 	}
 }

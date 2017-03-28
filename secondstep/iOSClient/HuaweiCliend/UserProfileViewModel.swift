@@ -26,14 +26,14 @@ class AcademUserProfilViewModel : UserProfilViewModel {
 	init(model : UserProfileModel) {
 		self.model = model
 		
-		let name = model.name ?? "Undefined"
-		let surname = model.surname ?? "Undefined"
-		let patronicName = model.patronicName ?? "Undefined"
+		let name = model.name() ?? "Undefined"
+		let surname = model.surname() ?? "Undefined"
+		let patronicName = model.patronicName() ?? "Undefined"
 		
 		self.fullName = "\(name) \(surname) \(patronicName)"
-		self.login = model.login ?? "Undefined"
-		self.phone = model.phone ?? "Undefined"
-		self.deviceInfo = model.deviceInfo ?? "Undefined"
+		self.login = model.login() ?? "Undefined"
+		self.phone = model.phone() ?? "Undefined"
+		self.deviceInfo = model.deviceInfo() ?? "Undefined"
 	}
 	
 }

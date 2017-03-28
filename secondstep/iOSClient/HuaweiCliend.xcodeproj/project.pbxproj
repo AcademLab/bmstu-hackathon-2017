@@ -25,6 +25,12 @@
 		FC4161831E89D6C600919384 /* JSONKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4161821E89D6C600919384 /* JSONKeys.swift */; };
 		FC4161851E89E30200919384 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4161841E89E30200919384 /* UserProfileViewController.swift */; };
 		FC8E6A851E8AC80700605214 /* UserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8E6A841E8AC80700605214 /* UserProfileViewModel.swift */; };
+		FC8E6A891E8ACF8000605214 /* FeedbackModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8E6A881E8ACF8000605214 /* FeedbackModel.swift */; };
+		FC8E6A8B1E8AD0A800605214 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8E6A8A1E8AD0A800605214 /* FeedbackViewController.swift */; };
+		FC8E6A8D1E8AD18800605214 /* AcademicFeedbackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8E6A8C1E8AD18800605214 /* AcademicFeedbackViewModel.swift */; };
+		FC8E6A901E8AD39200605214 /* AcademViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8E6A8F1E8AD39200605214 /* AcademViewController.swift */; };
+		FC8E6A921E8AD78500605214 /* NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8E6A911E8AD78500605214 /* NSObject.swift */; };
+		FC8E6A981E8AD86700605214 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8E6A971E8AD86700605214 /* TabBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +70,12 @@
 		FC4161821E89D6C600919384 /* JSONKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONKeys.swift; sourceTree = "<group>"; };
 		FC4161841E89E30200919384 /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		FC8E6A841E8AC80700605214 /* UserProfileViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewModel.swift; sourceTree = "<group>"; };
+		FC8E6A881E8ACF8000605214 /* FeedbackModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackModel.swift; sourceTree = "<group>"; };
+		FC8E6A8A1E8AD0A800605214 /* FeedbackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
+		FC8E6A8C1E8AD18800605214 /* AcademicFeedbackViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcademicFeedbackViewModel.swift; sourceTree = "<group>"; };
+		FC8E6A8F1E8AD39200605214 /* AcademViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcademViewController.swift; sourceTree = "<group>"; };
+		FC8E6A911E8AD78500605214 /* NSObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObject.swift; sourceTree = "<group>"; };
+		FC8E6A971E8AD86700605214 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +147,7 @@
 				FC4161771E89BE2D00919384 /* ViewModels */,
 				FC4161721E89B65A00919384 /* Services */,
 				FC4161731E89B66400919384 /* Models */,
+				FC8E6A8E1E8AD38600605214 /* Extensions */,
 				FC41614B1E89A8B100919384 /* Main.storyboard */,
 				FC41614E1E89A8B100919384 /* Assets.xcassets */,
 				FC4161501E89A8B100919384 /* LaunchScreen.storyboard */,
@@ -166,6 +179,7 @@
 			children = (
 				FC41617C1E89C0C000919384 /* SignInModel.swift */,
 				FC4161741E89B67B00919384 /* UserProfile.swift */,
+				FC8E6A881E8ACF8000605214 /* FeedbackModel.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -176,6 +190,7 @@
 				FC4161781E89BE4400919384 /* NewsViewModel.swift */,
 				FC41617A1E89C06900919384 /* SignInViewModel.swift */,
 				FC8E6A841E8AC80700605214 /* UserProfileViewModel.swift */,
+				FC8E6A8C1E8AD18800605214 /* AcademicFeedbackViewModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -183,11 +198,22 @@
 		FC8E6A831E8AC7DB00605214 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FC8E6A971E8AD86700605214 /* TabBarViewController.swift */,
 				FC4161701E89B42800919384 /* SignViewController.swift */,
 				FC4161471E89A8B100919384 /* NewsViewController.swift */,
 				FC4161841E89E30200919384 /* UserProfileViewController.swift */,
+				FC8E6A8A1E8AD0A800605214 /* FeedbackViewController.swift */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FC8E6A8E1E8AD38600605214 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FC8E6A8F1E8AD39200605214 /* AcademViewController.swift */,
+				FC8E6A911E8AD78500605214 /* NSObject.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -395,16 +421,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC41616D1E89B02F00919384 /* Network.swift in Sources */,
+				FC8E6A8D1E8AD18800605214 /* AcademicFeedbackViewModel.swift in Sources */,
 				FC4161831E89D6C600919384 /* JSONKeys.swift in Sources */,
 				FC41617B1E89C06900919384 /* SignInViewModel.swift in Sources */,
+				FC8E6A981E8AD86700605214 /* TabBarViewController.swift in Sources */,
+				FC8E6A8B1E8AD0A800605214 /* FeedbackViewController.swift in Sources */,
 				FC4161791E89BE4400919384 /* NewsViewModel.swift in Sources */,
+				FC8E6A921E8AD78500605214 /* NSObject.swift in Sources */,
 				FC4161481E89A8B100919384 /* NewsViewController.swift in Sources */,
 				FC8E6A851E8AC80700605214 /* UserProfileViewModel.swift in Sources */,
 				FC4161811E89D48700919384 /* Router.swift in Sources */,
 				FC4161461E89A8B100919384 /* AppDelegate.swift in Sources */,
 				FC41617D1E89C0C000919384 /* SignInModel.swift in Sources */,
 				FC4161751E89B67B00919384 /* UserProfile.swift in Sources */,
+				FC8E6A891E8ACF8000605214 /* FeedbackModel.swift in Sources */,
 				FC4161851E89E30200919384 /* UserProfileViewController.swift in Sources */,
+				FC8E6A901E8AD39200605214 /* AcademViewController.swift in Sources */,
 				FC4161711E89B42800919384 /* SignViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

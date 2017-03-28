@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="kVg-Ek-DQd">
             <objects>
-                <tabBarController id="XWU-XL-avd" sceneMemberID="viewController">
+                <tabBarController id="XWU-XL-avd" customClass="TabBarViewController" customModule="HuaweiCliend" customModuleProvider="target" sceneMemberID="viewController">
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="200"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="jlS-FX-6k2">
@@ -91,8 +91,7 @@
         <!--Sign View Controller-->
         <scene sceneID="uD4-8X-EGu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ixf-cX-S53" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="zpA-NP-nZg" customClass="SignViewController" customModule="HuaweiCliend" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignViewController" id="zpA-NP-nZg" customClass="SignViewController" customModule="HuaweiCliend" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rJl-dw-Q00"/>
                         <viewControllerLayoutGuide type="bottom" id="plb-lM-lpW"/>
@@ -145,6 +144,7 @@
                         <outlet property="passwordField" destination="MDH-nw-tWX" id="de0-E4-NF8"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ixf-cX-S53" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="161" y="-388"/>
         </scene>
@@ -168,23 +168,52 @@
         <!--Feedback-->
         <scene sceneID="2Kh-8b-m05">
             <objects>
-                <viewController id="4wH-hy-Ctu" sceneMemberID="viewController">
+                <viewController title="Feedback" id="4wH-hy-Ctu" customClass="FeedbackViewController" customModule="HuaweiCliend" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jOa-px-FuC"/>
                         <viewControllerLayoutGuide type="bottom" id="zNn-Kr-9Yn"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="0CS-32-7Mk">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OCt-Me-swg">
+                                <rect key="frame" x="97" y="262" width="180" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Send"/>
+                                <connections>
+                                    <action selector="sendFeedback" destination="4wH-hy-Ctu" eventType="touchUpInside" id="1NX-tL-Rra"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZX2-NR-61Q">
+                                <rect key="frame" x="16" y="86" width="343" height="151"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Send report about device problems:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eey-ur-pBQ">
+                                <rect key="frame" x="16" y="28" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Feedback" id="LSP-vn-zWl"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="400"/>
+                    <connections>
+                        <outlet property="commentTextView" destination="ZX2-NR-61Q" id="J7Y-WV-Lxc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lvo-gj-mh4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-660" y="-477"/>
+            <point key="canvasLocation" x="-660" y="-447.0764617691155"/>
         </scene>
-        <!--Item-->
+        <!--Profile-->
         <scene sceneID="bQ1-PZ-oSp">
             <objects>
                 <viewController id="Ofq-bU-h4r" customClass="UserProfileViewController" customModule="HuaweiCliend" customModuleProvider="target" sceneMemberID="viewController">
@@ -227,7 +256,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="r5L-ek-QV1"/>
+                    <tabBarItem key="tabBarItem" title="Profile" id="r5L-ek-QV1"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="500"/>
                     <connections>
@@ -239,12 +268,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6iP-rz-71P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-660" y="-20"/>
+            <point key="canvasLocation" x="-682" y="85"/>
         </scene>
         <!--Master-->
         <scene sceneID="urr-gv-Zr0">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vLV-bh-U4l" sceneMemberID="firstResponder"/>
                 <tableViewController title="Master" clearsSelectionOnViewWillAppear="NO" id="8PP-86-Avp" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="dy2-mQ-Cip">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
@@ -278,6 +306,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Master" id="g0J-JS-Jfh"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vLV-bh-U4l" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="161" y="-785"/>
         </scene>

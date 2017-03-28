@@ -18,15 +18,18 @@ fileprivate let kLoginKey = "login"
 
 enum UserProfileError : Error {
 	case unableToSave
+	case unknown
 }
 
 protocol UserProfileModel {
-	var name : String? { get }
-	var surname : String? { get }
-	var patronicName : String? { get }
-	var login : String? { get }
-	var phone : String? { get }
-	var deviceInfo : String? { get }
+	func name() -> String?
+	func surname() -> String?
+	func patronicName() -> String?
+	func login() -> String?
+	func phone() -> String?
+	func deviceInfo() -> String?
+	
+	static func isAuthorized() -> Bool
 	
 	func updateName(_ newName : String) throws
 	func updateSurname(_ newSurname : String) throws
@@ -36,24 +39,36 @@ protocol UserProfileModel {
 }
 
 class AcademicUserProfileModel : UserProfileModel {
-	var name : String? = {
+	func name() -> String? {
 		return KeychainSwift().get(kNameKey)
-	}()
-	var surname : String? = {
+	}
+	func surname() -> String? {
 		return KeychainSwift().get(kSurnameKey)
-	}()
-	var patronicName : String? = {
+	}
+	func patronicName() -> String? {
 		return KeychainSwift().get(kPatronicNameKey)
-	}()
-	var phone : String? = {
+	}
+	func phone() -> String? {
 		return KeychainSwift().get(kPhoneKey)
-	}()
-	var login : String? = {
+	}
+	func login() ->  String? {
 		return KeychainSwift().get(kLoginKey)
-	}()
-	var deviceInfo: String? = {
+	}
+	func deviceInfo() ->  String? {
 		return "TEST DEVICE"
-	}()
+	}
+	
+	static func isAuthorized() -> Bool {
+		let model = AcademicUserProfileModel()
+		guard let _ = model.name(),
+			  let _ = model.surname(),
+			  let _ = model.phone(),
+			  let _ = model.login() else {
+			return false
+		}
+		
+		return true
+	}
 	
 	func updateName(_ newName : String) throws {
 		guard KeychainSwift().set(newName, forKey: kNameKey) else {
@@ -62,12 +77,12 @@ class AcademicUserProfileModel : UserProfileModel {
 	}
 	
 	func updateSurname(_ newSurname : String) throws {
-		guard KeychainSwift().set(newSurname, forKey: kPatronicNameKey) else {
+		guard KeychainSwift().set(newSurname, forKey: kSurnameKey) else {
 			throw UserProfileError.unableToSave
 		}
 	}
 	func updatePatronicName(_ newPatronicName : String) throws {
-		guard KeychainSwift().set(newPatronicName, forKey: kNameKey) else {
+		guard KeychainSwift().set(newPatronicName, forKey: kPatronicNameKey) else {
 			throw UserProfileError.unableToSave
 		}
 	}

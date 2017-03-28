@@ -15,6 +15,7 @@ protocol SignInViewModel {
 
 protocol SignInViewModelDelegate : class {
 	func didFailAuth(errorMsg : String)
+	func didSuccess()
 }
 
 class AcademSignInViewModel : SignInViewModel{
@@ -27,13 +28,32 @@ class AcademSignInViewModel : SignInViewModel{
 	}
 	
 	func didEndEntetingCredentials(login : String, password : String) {
-		model.authWith(login: login, password: password) { [unowned self] (userInfo, error) -> (Void) in
-			guard error == nil else {
+		model.authWith(login: login, password: password) {
+			
+			[unowned self] (userInfo, error) -> (Void) in
+			
+			guard let userInfo = userInfo,
+				error == nil else {
 				self.delegate?.didFailAuth(errorMsg: AcademSignInViewModel.string(from: error))
 				return
 			}
-			
 			debugPrint("success auth \(userInfo)")
+			
+			let userProfileModel = AcademicUserProfileModel()
+			do {
+				try userProfileModel.updateName(userInfo.name)
+				try userProfileModel.updateSurname(userInfo.surname)
+				try userProfileModel.updatePatronicName(userInfo.patrnoicName)
+				try userProfileModel.updateLogin(userInfo.login)
+				try userProfileModel.updatePhone(userInfo.phone)
+				self.delegate?.didSuccess()
+			}
+			catch let saveError as UserProfileError {
+				self.delegate?.didFailAuth(errorMsg: AcademSignInViewModel.string(from: saveError))
+			}
+			catch {
+				self.delegate?.didFailAuth(errorMsg: "Unknown error.")
+			}
 		}
 	}
 	
@@ -50,6 +70,16 @@ class AcademSignInViewModel : SignInViewModel{
 			return "Failed request."
 		case NetworkError.unauthorized:
 			return "Invalid credentials."
+		default:
+			return "Unknown error"
+		}
+	}
+	
+	fileprivate static func string(from error : UserProfileError?) -> String {
+		
+		switch error ?? .unknown {
+		case .unableToSave:
+			return "Unable to save data."
 		default:
 			return "Unknown error"
 		}

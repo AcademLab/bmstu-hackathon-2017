@@ -23,6 +23,7 @@ class UserProfileViewController: UIViewController {
 	
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
+		AcadeomRouter.sharedInstance.showAuth()
 		setupData()
 	}
 	
