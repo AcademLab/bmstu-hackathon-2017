@@ -1,9 +1,9 @@
-package profiles.api.controllers;
+package places.api.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import profiles.api.place.Place;
-import profiles.api.services.PlacesService;
+import places.api.place.Place;
+import places.api.services.PlacesService;
 import java.util.ArrayList;
 
 @RestController
