@@ -21,7 +21,6 @@ class FeedbackViewController: AcademViewController, MFMailComposeViewControllerD
 	
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
-		AcadeomRouter.sharedInstance.showAuth()
 	}
 	
 	@IBAction func sendFeedback() {
@@ -35,6 +34,10 @@ class FeedbackViewController: AcademViewController, MFMailComposeViewControllerD
 		
 		self.present(mailComposeViewController, animated: true, completion: nil)
 		
+	}
+	
+	override func setup() {
+		self.title = "Feedback"
 	}
 	
 	// MARK: - MFMailCompose
@@ -59,7 +62,10 @@ class FeedbackViewController: AcademViewController, MFMailComposeViewControllerD
 	func mailComposeController(_ controller: MFMailComposeViewController,
 	                           didFinishWith result: MFMailComposeResult, error: Error?) {
 		controller.dismiss(animated: true, completion: nil)
-		showMessage("Successfully sent.")
+		
+		if (result == .sent) {
+			showMessage("Successfully sent.")
+		}
 	}
 
 }

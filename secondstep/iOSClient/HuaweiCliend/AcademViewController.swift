@@ -15,6 +15,11 @@ class AcademViewController : UIViewController {
 		setup()
 	}
 	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		AcadeomRouter.sharedInstance.showAuth()
+	}
+	
 	func setup() {
 		setupGestures()
 	}

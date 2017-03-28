@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UserProfileViewController: UIViewController {
+class UserProfileViewController: AcademViewController {
 	
 	@IBOutlet weak var fullNameLabel: UILabel!
 	@IBOutlet weak var loginLabel: UILabel!
@@ -23,8 +23,11 @@ class UserProfileViewController: UIViewController {
 	
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
-		AcadeomRouter.sharedInstance.showAuth()
 		setupData()
+	}
+	
+	override func setup() {
+		self.title = "User Profile"
 	}
 	
 	// MARK: Setup data
