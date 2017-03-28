@@ -9,10 +9,16 @@ public class ProfilesService {
     UserRepository userRepository;
 
     public Profile getProfile(Login login) {
-        if (login.getLogin().equals("Uno"))
+        User user = userRepository.findOne(login.getLogin());
+
+        if (user == null)
             throw new UnauthorizedException();
 
-        return new Profile();
+        if (user.getPassword() != login.getPassword())
+            throw new UnauthorizedException();
+
+        return new Profile(user.getName(), user.getSurname(),
+                user.getPatronicName(), user.getPhone());
     }
 
 }

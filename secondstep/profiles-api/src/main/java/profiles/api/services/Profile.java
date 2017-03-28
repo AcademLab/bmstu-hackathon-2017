@@ -7,11 +7,12 @@ public class Profile {
     private String patronicName;
     private String phone;
 
-    public Profile() {
-        name = "Default";
-        surname = "Default";
-        patronicName = "Default";
-        phone = "+7 (999) 990 19 96";
+    public Profile(String name, String surname,
+                   String patronicName, String phone) {
+        setName(name);
+        setSurname(surname);
+        setPatronicName(patronicName);
+        setPhone(phone);
     }
 
     public void setName(String str) {
