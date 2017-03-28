@@ -24,6 +24,7 @@
 		FC4161811E89D48700919384 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4161801E89D48700919384 /* Router.swift */; };
 		FC4161831E89D6C600919384 /* JSONKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4161821E89D6C600919384 /* JSONKeys.swift */; };
 		FC4161851E89E30200919384 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4161841E89E30200919384 /* UserProfileViewController.swift */; };
+		FC8E6A851E8AC80700605214 /* UserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8E6A841E8AC80700605214 /* UserProfileViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		FC4161801E89D48700919384 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		FC4161821E89D6C600919384 /* JSONKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONKeys.swift; sourceTree = "<group>"; };
 		FC4161841E89E30200919384 /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		FC8E6A841E8AC80700605214 /* UserProfileViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,9 +130,8 @@
 			isa = PBXGroup;
 			children = (
 				FC4161451E89A8B100919384 /* AppDelegate.swift */,
-				FC4161701E89B42800919384 /* SignViewController.swift */,
-				FC4161471E89A8B100919384 /* NewsViewController.swift */,
-				FC4161841E89E30200919384 /* UserProfileViewController.swift */,
+				FC4161801E89D48700919384 /* Router.swift */,
+				FC8E6A831E8AC7DB00605214 /* ViewControllers */,
 				FC4161771E89BE2D00919384 /* ViewModels */,
 				FC4161721E89B65A00919384 /* Services */,
 				FC4161731E89B66400919384 /* Models */,
@@ -174,9 +175,19 @@
 			children = (
 				FC4161781E89BE4400919384 /* NewsViewModel.swift */,
 				FC41617A1E89C06900919384 /* SignInViewModel.swift */,
-				FC4161801E89D48700919384 /* Router.swift */,
+				FC8E6A841E8AC80700605214 /* UserProfileViewModel.swift */,
 			);
 			name = ViewModels;
+			sourceTree = "<group>";
+		};
+		FC8E6A831E8AC7DB00605214 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FC4161701E89B42800919384 /* SignViewController.swift */,
+				FC4161471E89A8B100919384 /* NewsViewController.swift */,
+				FC4161841E89E30200919384 /* UserProfileViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -388,6 +399,7 @@
 				FC41617B1E89C06900919384 /* SignInViewModel.swift in Sources */,
 				FC4161791E89BE4400919384 /* NewsViewModel.swift in Sources */,
 				FC4161481E89A8B100919384 /* NewsViewController.swift in Sources */,
+				FC8E6A851E8AC80700605214 /* UserProfileViewModel.swift in Sources */,
 				FC4161811E89D48700919384 /* Router.swift in Sources */,
 				FC4161461E89A8B100919384 /* AppDelegate.swift in Sources */,
 				FC41617D1E89C0C000919384 /* SignInModel.swift in Sources */,
