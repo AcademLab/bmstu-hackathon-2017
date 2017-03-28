@@ -16,7 +16,7 @@ public class ProfilesService {
         if (user == null)
             throw new UnauthorizedException();
 
-        if (user.getPassword() != login.getPassword())
+        if (!user.getPassword().equals(login.getPassword()))
             throw new UnauthorizedException();
 
         return new Profile(user.getName(), user.getSurname(),
