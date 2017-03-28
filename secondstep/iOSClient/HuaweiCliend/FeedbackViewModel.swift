@@ -17,7 +17,7 @@ protocol FeedbackViewModel {
 }
 
 fileprivate let _subject = "Device problem report"
-fileprivate let _recipients = ["amin.benarieb@gmail.com"]
+fileprivate let _recipients = ["amin.benarieb@gmail.com", "kondrashin96@gmail.com"]
 
 class AcademicFeedbackViewModel : FeedbackViewModel {
 	

@@ -27,7 +27,7 @@
 		FC8E6A851E8AC80700605214 /* UserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8E6A841E8AC80700605214 /* UserProfileViewModel.swift */; };
 		FC8E6A891E8ACF8000605214 /* FeedbackModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8E6A881E8ACF8000605214 /* FeedbackModel.swift */; };
 		FC8E6A8B1E8AD0A800605214 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8E6A8A1E8AD0A800605214 /* FeedbackViewController.swift */; };
-		FC8E6A8D1E8AD18800605214 /* AcademicFeedbackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8E6A8C1E8AD18800605214 /* AcademicFeedbackViewModel.swift */; };
+		FC8E6A8D1E8AD18800605214 /* FeedbackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8E6A8C1E8AD18800605214 /* FeedbackViewModel.swift */; };
 		FC8E6A901E8AD39200605214 /* AcademViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8E6A8F1E8AD39200605214 /* AcademViewController.swift */; };
 		FC8E6A921E8AD78500605214 /* NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8E6A911E8AD78500605214 /* NSObject.swift */; };
 		FC8E6A981E8AD86700605214 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8E6A971E8AD86700605214 /* TabBarViewController.swift */; };
@@ -36,6 +36,10 @@
 		FC8E6A9E1E8AFCB000605214 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8E6A9D1E8AFCB000605214 /* Date.swift */; };
 		FC8E6AA11E8B079F00605214 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8E6AA01E8B079F00605214 /* NewsTableViewCell.swift */; };
 		FC8E6AA31E8B0CD200605214 /* NewsItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8E6AA21E8B0CD200605214 /* NewsItemViewController.swift */; };
+		FC8E6AA51E8B1C9100605214 /* PlacesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8E6AA41E8B1C9100605214 /* PlacesModel.swift */; };
+		FC8E6AA71E8B25D500605214 /* PlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8E6AA61E8B25D500605214 /* PlacesViewController.swift */; };
+		FC8E6AA91E8B26CB00605214 /* PlacesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8E6AA81E8B26CB00605214 /* PlacesViewModel.swift */; };
+		FC8E6AAB1E8B291500605214 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC8E6AAA1E8B291500605214 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,7 +81,7 @@
 		FC8E6A841E8AC80700605214 /* UserProfileViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewModel.swift; sourceTree = "<group>"; };
 		FC8E6A881E8ACF8000605214 /* FeedbackModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackModel.swift; sourceTree = "<group>"; };
 		FC8E6A8A1E8AD0A800605214 /* FeedbackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
-		FC8E6A8C1E8AD18800605214 /* AcademicFeedbackViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcademicFeedbackViewModel.swift; sourceTree = "<group>"; };
+		FC8E6A8C1E8AD18800605214 /* FeedbackViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackViewModel.swift; sourceTree = "<group>"; };
 		FC8E6A8F1E8AD39200605214 /* AcademViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcademViewController.swift; sourceTree = "<group>"; };
 		FC8E6A911E8AD78500605214 /* NSObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObject.swift; sourceTree = "<group>"; };
 		FC8E6A971E8AD86700605214 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +90,10 @@
 		FC8E6A9D1E8AFCB000605214 /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		FC8E6AA01E8B079F00605214 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		FC8E6AA21E8B0CD200605214 /* NewsItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsItemViewController.swift; sourceTree = "<group>"; };
+		FC8E6AA41E8B1C9100605214 /* PlacesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesModel.swift; sourceTree = "<group>"; };
+		FC8E6AA61E8B25D500605214 /* PlacesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesViewController.swift; sourceTree = "<group>"; };
+		FC8E6AA81E8B26CB00605214 /* PlacesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesViewModel.swift; sourceTree = "<group>"; };
+		FC8E6AAA1E8B291500605214 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC8E6AAB1E8B291500605214 /* MapKit.framework in Frameworks */,
 				EF3803BA474A53FA7EFC22F6 /* Pods_HuaweiCliend.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -122,6 +131,7 @@
 		E85B4F14C6595F0ABD86C383 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FC8E6AAA1E8B291500605214 /* MapKit.framework */,
 				401ABDA457C5238DA6B7B12A /* Pods_HuaweiCliend.framework */,
 				C7D1A0574E692E9046378C15 /* Pods_HuaweiCliendTests.framework */,
 			);
@@ -192,6 +202,7 @@
 				FC41617C1E89C0C000919384 /* SignInModel.swift */,
 				FC4161741E89B67B00919384 /* UserProfile.swift */,
 				FC8E6A881E8ACF8000605214 /* FeedbackModel.swift */,
+				FC8E6AA41E8B1C9100605214 /* PlacesModel.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -199,10 +210,11 @@
 		FC4161771E89BE2D00919384 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				FC8E6AA81E8B26CB00605214 /* PlacesViewModel.swift */,
 				FC4161781E89BE4400919384 /* NewsViewModel.swift */,
 				FC41617A1E89C06900919384 /* SignInViewModel.swift */,
 				FC8E6A841E8AC80700605214 /* UserProfileViewModel.swift */,
-				FC8E6A8C1E8AD18800605214 /* AcademicFeedbackViewModel.swift */,
+				FC8E6A8C1E8AD18800605214 /* FeedbackViewModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -214,6 +226,7 @@
 				FC4161701E89B42800919384 /* SignViewController.swift */,
 				FC4161471E89A8B100919384 /* NewsViewController.swift */,
 				FC8E6AA21E8B0CD200605214 /* NewsItemViewController.swift */,
+				FC8E6AA61E8B25D500605214 /* PlacesViewController.swift */,
 				FC4161841E89E30200919384 /* UserProfileViewController.swift */,
 				FC8E6A8A1E8AD0A800605214 /* FeedbackViewController.swift */,
 			);
@@ -297,6 +310,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 5P8935L6RT;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					FC4161571E89A8B100919384 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -444,16 +462,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC41616D1E89B02F00919384 /* Network.swift in Sources */,
-				FC8E6A8D1E8AD18800605214 /* AcademicFeedbackViewModel.swift in Sources */,
+				FC8E6A8D1E8AD18800605214 /* FeedbackViewModel.swift in Sources */,
 				FC4161831E89D6C600919384 /* JSONKeys.swift in Sources */,
 				FC8E6A9A1E8AEF0F00605214 /* UIViewController.swift in Sources */,
 				FC8E6A9C1E8AF49A00605214 /* NewsModel.swift in Sources */,
 				FC41617B1E89C06900919384 /* SignInViewModel.swift in Sources */,
 				FC8E6A981E8AD86700605214 /* TabBarViewController.swift in Sources */,
+				FC8E6AA71E8B25D500605214 /* PlacesViewController.swift in Sources */,
 				FC8E6A8B1E8AD0A800605214 /* FeedbackViewController.swift in Sources */,
 				FC4161791E89BE4400919384 /* NewsViewModel.swift in Sources */,
+				FC8E6AA91E8B26CB00605214 /* PlacesViewModel.swift in Sources */,
 				FC8E6A921E8AD78500605214 /* NSObject.swift in Sources */,
 				FC4161481E89A8B100919384 /* NewsViewController.swift in Sources */,
+				FC8E6AA51E8B1C9100605214 /* PlacesModel.swift in Sources */,
 				FC8E6A851E8AC80700605214 /* UserProfileViewModel.swift in Sources */,
 				FC8E6AA11E8B079F00605214 /* NewsTableViewCell.swift in Sources */,
 				FC4161811E89D48700919384 /* Router.swift in Sources */,
