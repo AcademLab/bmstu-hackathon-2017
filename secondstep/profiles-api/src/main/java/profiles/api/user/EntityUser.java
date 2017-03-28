@@ -12,7 +12,7 @@ public class EntityUser extends User {
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Integer id;
 
-    public void setIt(Integer id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
