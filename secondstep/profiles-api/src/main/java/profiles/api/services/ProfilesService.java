@@ -1,12 +1,14 @@
 package profiles.api.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import profiles.api.exceptions.UnauthorizedException;
 
+@Service
 public class ProfilesService {
 
     @Autowired
-    UserRepository userRepository;
+    private UserRepository userRepository;
 
     public Profile getProfile(Login login) {
         User user = userRepository.findOne(login.getLogin());
