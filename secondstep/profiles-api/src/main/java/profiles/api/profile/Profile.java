@@ -1,35 +1,18 @@
-package profiles.api.services;
+package profiles.api.profile;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-
-@Entity
-public class User {
-
-    @Id
-    private String login;
-    private String password;
+public class Profile {
 
     private String name;
     private String surname;
     private String patronicName;
-
     private String phone;
 
-    public void setLogin(String str) {
-        login = str;
-    }
-
-    public String getLogin() {
-        return login;
-    }
-
-    public void setPassword(String str) {
-        password = str;
-    }
-
-    public String getPassword() {
-        return password;
+    public Profile(String name, String surname,
+                   String patronicName, String phone) {
+        setName(name);
+        setSurname(surname);
+        setPatronicName(patronicName);
+        setPhone(phone);
     }
 
     public void setName(String str) {

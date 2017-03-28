@@ -4,8 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import profiles.api.exceptions.UnauthorizedException;
-import profiles.api.services.Profile;
-import profiles.api.services.Login;
+import profiles.api.profile.Profile;
+import profiles.api.login.Login;
 import profiles.api.services.ProfilesService;
 
 @RestController

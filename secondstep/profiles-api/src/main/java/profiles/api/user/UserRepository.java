@@ -1,4 +1,4 @@
-package profiles.api.services;
+package profiles.api.user;
 
 import org.springframework.data.repository.CrudRepository;
 

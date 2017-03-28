@@ -1,4 +1,4 @@
-package profiles.api.services;
+package profiles.api.login;
 
 public class Login {
 
