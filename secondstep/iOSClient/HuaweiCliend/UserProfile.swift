@@ -8,6 +8,8 @@
 
 import Foundation
 import KeychainSwift
+import DeviceGuru
+
 
 fileprivate let kNameKey = "name"
 fileprivate let kSurnameKey = "surname"
@@ -56,7 +58,7 @@ class AcademicUserProfileModel : UserProfileModel {
 		return KeychainSwift().get(kLoginKey)
 	}
 	func deviceInfo() ->  String? {
-		return "TEST DEVICE"
+		return DeviceGuru.hardwareString()
 	}
 	
 	static func isAuthorized() -> Bool {

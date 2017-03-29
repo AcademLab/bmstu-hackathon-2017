@@ -8,6 +8,7 @@ target 'HuaweiCliend' do
   pod 'Alamofire', '~> 4.1'
   pod 'AlamofireRSSParser'
   pod 'SwiftyJSON', '~> 3.1'
+  pod 'DeviceGuru'
 
 
   target 'HuaweiCliendTests' do

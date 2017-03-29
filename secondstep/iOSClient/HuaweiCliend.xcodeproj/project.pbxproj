@@ -94,6 +94,7 @@
 		FC8E6AA61E8B25D500605214 /* PlacesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesViewController.swift; sourceTree = "<group>"; };
 		FC8E6AA81E8B26CB00605214 /* PlacesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesViewModel.swift; sourceTree = "<group>"; };
 		FC8E6AAA1E8B291500605214 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		FC8E6AAC1E8B300400605214 /* HuaweiCliend-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HuaweiCliend-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +162,7 @@
 		FC4161441E89A8B100919384 /* HuaweiCliend */ = {
 			isa = PBXGroup;
 			children = (
+				FC8E6AAC1E8B300400605214 /* HuaweiCliend-Bridging-Header.h */,
 				FC4161451E89A8B100919384 /* AppDelegate.swift */,
 				FC4161801E89D48700919384 /* Router.swift */,
 				FC8E6A9F1E8B079600605214 /* Views */,
@@ -309,6 +311,7 @@
 					FC4161411E89A8B100919384 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 5P8935L6RT;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
@@ -626,11 +629,14 @@
 			baseConfigurationReference = 7BE932210A5DC25EADE6BB1C /* Pods-HuaweiCliend.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 5P8935L6RT;
 				INFOPLIST_FILE = HuaweiCliend/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.amin.benarieb.HuaweiCliend;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HuaweiCliend-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -640,11 +646,13 @@
 			baseConfigurationReference = 933AECD11C931F87B84023FD /* Pods-HuaweiCliend.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 5P8935L6RT;
 				INFOPLIST_FILE = HuaweiCliend/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.amin.benarieb.HuaweiCliend;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HuaweiCliend-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
