@@ -34,7 +34,7 @@ class NewsViewController: AcademViewController, UITableViewDelegate, UITableView
 		
 		viewModel?.delegate = self
 		
-		title = "Company News"
+		title = "News"
 		
 	}
 	

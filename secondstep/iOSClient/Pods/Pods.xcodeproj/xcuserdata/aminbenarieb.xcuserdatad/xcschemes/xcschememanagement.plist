@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ChameleonFramework.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>DeviceGuru-DeviceGuru.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -52,22 +57,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>34C6B05919A5FFFBE4EC52FDF11874DD</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>38ACA430605AFB4229712A18BDDF5086</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>40E0C3CCEE742964FEBDE3578CDA4F7A</key>
+		<key>3BC435141DB11F6D5A1CE039E47C90B0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>5E73C2EDB239F12B477FB75D4ADD8FF6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>624CA01239274A51E107B9DFBDFF9EAD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>76BD4592010354D6C23D6ECCA20D83A8</key>
 		<dict>
 			<key>primary</key>
 			<true/>

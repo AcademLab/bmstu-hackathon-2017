@@ -40,6 +40,7 @@
 		FC8E6AA71E8B25D500605214 /* PlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8E6AA61E8B25D500605214 /* PlacesViewController.swift */; };
 		FC8E6AA91E8B26CB00605214 /* PlacesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8E6AA81E8B26CB00605214 /* PlacesViewModel.swift */; };
 		FC8E6AAB1E8B291500605214 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC8E6AAA1E8B291500605214 /* MapKit.framework */; };
+		FC8E6AB11E8B381A00605214 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8E6AB01E8B381A00605214 /* Theme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		FC8E6AA81E8B26CB00605214 /* PlacesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesViewModel.swift; sourceTree = "<group>"; };
 		FC8E6AAA1E8B291500605214 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		FC8E6AAC1E8B300400605214 /* HuaweiCliend-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HuaweiCliend-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		FC8E6AB01E8B381A00605214 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Theme.swift; path = ../Theme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 				FC8E6AAC1E8B300400605214 /* HuaweiCliend-Bridging-Header.h */,
 				FC4161451E89A8B100919384 /* AppDelegate.swift */,
 				FC4161801E89D48700919384 /* Router.swift */,
+				FC8E6AB01E8B381A00605214 /* Theme.swift */,
 				FC8E6A9F1E8B079600605214 /* Views */,
 				FC8E6A831E8AC7DB00605214 /* ViewControllers */,
 				FC4161771E89BE2D00919384 /* ViewModels */,
@@ -464,6 +467,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC8E6AB11E8B381A00605214 /* Theme.swift in Sources */,
 				FC41616D1E89B02F00919384 /* Network.swift in Sources */,
 				FC8E6A8D1E8AD18800605214 /* FeedbackViewModel.swift in Sources */,
 				FC4161831E89D6C600919384 /* JSONKeys.swift in Sources */,
