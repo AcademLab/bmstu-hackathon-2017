@@ -58,7 +58,7 @@ class AcademicUserProfileModel : UserProfileModel {
 		return KeychainSwift().get(kLoginKey)
 	}
 	func deviceInfo() ->  String? {
-		return DeviceGuru.hardwareString()
+		return DeviceGuru.hardwareDescription()
 	}
 	
 	static func isAuthorized() -> Bool {
