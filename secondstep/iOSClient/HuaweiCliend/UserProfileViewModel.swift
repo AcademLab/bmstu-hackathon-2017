@@ -30,7 +30,7 @@ class AcademUserProfilViewModel : UserProfilViewModel {
 		let surname = model.surname() ?? "Undefined"
 		let patronicName = model.patronicName() ?? "Undefined"
 		
-		self.fullName = "\(name) \(surname) \(patronicName)"
+		self.fullName = "\(name) \(patronicName) \(surname)"
 		self.login = model.login() ?? "Undefined"
 		self.phone = model.phone() ?? "Undefined"
 		self.deviceInfo = model.deviceInfo() ?? "Undefined"
