@@ -45,3 +45,11 @@ secondstep/iOSClient/HuaweiCliend.xcworkspace/xcuserdata/aminbenarieb.xcuserdata
 /final/auth-api/gradlew
 /final/auth-api/gradlew.bat
 /final/auth-api/gradle/*
+
+/final/token-api/.idea/*
+/final/token-api/.gradle/*
+/final/token-api/build/*
+/final/token-api/out/*
+/final/token-api/gradlew
+/final/token-api/gradlew.bat
+/final/token-api/gradle/*
