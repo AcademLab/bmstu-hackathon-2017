@@ -1,4 +1,4 @@
-package auth.api.services;
+package auth.api.services.auth;
 
 import org.springframework.data.repository.CrudRepository;
 

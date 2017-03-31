@@ -1,10 +1,10 @@
-package auth.api.services;
+package auth.api.services.token;
 
 public class Token {
 
     private String token;
 
-    Token() {
+    public Token() {
         setToken("LALALA");
     }
 
