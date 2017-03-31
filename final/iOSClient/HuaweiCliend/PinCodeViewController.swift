@@ -50,12 +50,13 @@ extension ALButton {
 }
 
 
-class PinCodeViewController: UIViewController {
+class PinCodeViewController: AcademViewController, PinCodeViewModelDelegate {
 
 	@IBOutlet var emojiButtons : [ALEmojiButton]!
 	@IBOutlet weak var pincodeTextField: UITextField!
 	@IBOutlet weak var touchIDBUtton: UIButton!
 	@IBOutlet weak var backBUtton: UIButton!
+	var viewModel : PinCodeViewModel? = ALPinCodeViewModel(model: ALUserProfileModel())
 	
 	let 😎 = "😎"
 	let 😉 = "😉"
@@ -71,7 +72,7 @@ class PinCodeViewController: UIViewController {
 	var emojisMap = [ String : String ]()
 	
 	
-	func setup() {
+	override func setup() {
 		emojisMap = [ 😎 : "1",
 		              😉 : "2",
 		              😶 : "3",
@@ -90,7 +91,9 @@ class PinCodeViewController: UIViewController {
 			emojiButton.symbol = emojis.remove(at: idx)
 		}
 		
-		self.title =
+		self.title = viewModel?.title
+		
+		self.viewModel?.delegate = self
 	}
 	
 	required init?(coder aDecoder: NSCoder) {
@@ -107,7 +110,7 @@ class PinCodeViewController: UIViewController {
 		setupAppearance()
     }
 
-	//MARK : Appearance
+	// MARK : Appearance
 	
 	func setupAppearance(){
 		let image = #imageLiteral(resourceName: "TouchID").withRenderingMode(.alwaysTemplate)
@@ -116,9 +119,17 @@ class PinCodeViewController: UIViewController {
 		
 	}
 	
-	// MARL : Verify PinCode
+	// MARK : Delegate
 	
-    //MARK: Actions
+	func didSuccess(withMsg msg : String) {
+		showMessage(msg)
+	}
+	
+	func didFailPincodeVerification(withErrMsg errMsg: String) {
+		showMessage(errMsg)
+	}
+	
+    // MARK: Actions
 
 	@IBAction func didTap(_ sender: ALEmojiButton) {
 		guard let symbol = sender.symbol,
@@ -129,8 +140,7 @@ class PinCodeViewController: UIViewController {
 		let pincodeTextFieldText = pincodeTextField.text ?? ""
 		pincodeTextField.text = pincodeTextFieldText + number
 		
-		
-		
+		viewModel?.verifyPinCode(pincodeTextField.text!)
 	}
 	@IBAction func didTapTouchID(_ sender: Any) {
 	}
@@ -141,6 +151,5 @@ class PinCodeViewController: UIViewController {
 		
 		pincodeTextField.text = String(pincodeTextFieldText.characters.dropLast())
 	}
-	
 
 }
