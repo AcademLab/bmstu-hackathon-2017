@@ -1,14 +1,17 @@
 package auth.api.services.token;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class TokenService {
 
     public Token createToken(String login) {
-        // Тут будет создание токена с помощью key/value хранилища
-        return new Token();
+        // todo сделать генерацию токенов
+        return new Token("some_token");
     }
 
     public String decodeToken(Token token) {
-        return "login";
+        return "some_login";
     }
 
 }

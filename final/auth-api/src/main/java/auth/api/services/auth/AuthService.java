@@ -28,9 +28,7 @@ public class AuthService {
         Cryptographer cryptographer = new Cryptographer();
 
         if (!authInfo.getPasswordHash().equals(cryptographer.encrypt(receivedInfo.getPasswordHash()))) {
-            // Инкрементировать количество неуспешных попыток
-            // Заблокировать ip, если превышает
-
+            // todo Инкрементировать количество неуспешных попыток и тд
             throw new FailedPasswordException();
         }
 

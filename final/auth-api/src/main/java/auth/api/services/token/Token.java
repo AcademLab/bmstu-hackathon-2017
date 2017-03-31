@@ -4,8 +4,8 @@ public class Token {
 
     private String token;
 
-    public Token() {
-        setToken("LALALA");
+    public Token(String token) {
+        setToken(token);
     }
 
     public void setToken(String token) {
