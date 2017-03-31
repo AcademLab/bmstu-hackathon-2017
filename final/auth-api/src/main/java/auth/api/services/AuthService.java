@@ -6,15 +6,18 @@ import auth.api.exceptions.LoginNotFoundException;
 import auth.api.entity.UserInfo;
 import auth.api.repository.UserInfoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 @Service
 public class AuthService {
 
-    // todo параметризовать
-    private final String host = "localhost";
-    private final String port = "8091";
+    @Value("${tokenServiceHost}")
+    private String tokenServiceHost;
+
+    @Value("${tokenServicePort}")
+    private String tokenServicePort;
 
     @Autowired
     private UserInfoRepository userInfoRepository;
@@ -34,7 +37,7 @@ public class AuthService {
         }
 
         RestTemplate restTemplate = new RestTemplate();
-        String url = "http://" + host + ":" + port + "/wrap";
+        String url = "http://" + tokenServiceHost + ":" + tokenServicePort + "/wrap";
         return restTemplate.postForObject(url, authInfo, Token.class);
     }
 
