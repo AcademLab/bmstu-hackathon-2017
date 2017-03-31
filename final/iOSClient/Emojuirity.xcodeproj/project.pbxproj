@@ -103,7 +103,6 @@
 		FC8E6A971E8AD86700605214 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		FC8E6A991E8AEF0F00605214 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		FC8E6AAA1E8B291500605214 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		FC8E6AAC1E8B300400605214 /* HuaweiCliend-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HuaweiCliend-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		FC8E6AB01E8B381A00605214 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Theme.swift; path = ../Theme.swift; sourceTree = "<group>"; };
 		FCCD22EC1E8E8E82004699DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FCCD22F21E8E9345004699DC /* EmojiKeyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = EmojiKeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -187,7 +186,6 @@
 		FC4161441E89A8B100919384 /* Emojuirity */ = {
 			isa = PBXGroup;
 			children = (
-				FC8E6AAC1E8B300400605214 /* HuaweiCliend-Bridging-Header.h */,
 				FC4161451E89A8B100919384 /* AppDelegate.swift */,
 				FC4161801E89D48700919384 /* Router.swift */,
 				FC8E6A9F1E8B079600605214 /* Views */,
@@ -706,7 +704,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.amin.benarieb.HuaweiCliend;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "HuaweiCliend-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -724,7 +721,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.amin.benarieb.HuaweiCliend;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "HuaweiCliend-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
