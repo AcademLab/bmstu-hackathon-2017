@@ -2,8 +2,8 @@ package auth.api.controllers;
 
 import auth.api.exceptions.FailedPasswordException;
 import auth.api.exceptions.LoginNotFoundException;
-import auth.api.services.Token;
-import auth.api.userinfo.UserInfo;
+import auth.api.entity.Token;
+import auth.api.entity.UserInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

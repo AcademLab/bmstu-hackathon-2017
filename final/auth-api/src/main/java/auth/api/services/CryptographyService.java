@@ -1,6 +1,6 @@
 package auth.api.services;
 
-public class Cryptographer {
+public class CryptographyService {
 
     public String encrypt(String password) {
         // todo Реализовать шифрование пароля

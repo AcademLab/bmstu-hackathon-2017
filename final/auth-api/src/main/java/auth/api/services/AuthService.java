@@ -1,14 +1,20 @@
 package auth.api.services;
 
+import auth.api.entity.Token;
 import auth.api.exceptions.FailedPasswordException;
 import auth.api.exceptions.LoginNotFoundException;
-import auth.api.userinfo.UserInfo;
-import auth.api.userinfo.UserInfoRepository;
+import auth.api.entity.UserInfo;
+import auth.api.repository.UserInfoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 @Service
 public class AuthService {
+
+    // todo параметризовать
+    private final String host = "localhost";
+    private final String port = "8091";
 
     @Autowired
     private UserInfoRepository userInfoRepository;
@@ -20,16 +26,16 @@ public class AuthService {
         if (authInfo == null)
             throw new LoginNotFoundException();
 
-        Cryptographer cryptographer = new Cryptographer();
+        CryptographyService cryptographer = new CryptographyService();
 
         if (!authInfo.getPasswordHash().equals(cryptographer.encrypt(receivedInfo.getPasswordHash()))) {
             // todo Инкрементировать количество неуспешных попыток и тд
             throw new FailedPasswordException();
         }
 
-        // todo вызвать сервис для шифрования токена
-
-        return new Token("some_token");
+        RestTemplate restTemplate = new RestTemplate();
+        String url = "http://" + host + ":" + port + "/wrap";
+        return restTemplate.postForObject(url, authInfo, Token.class);
     }
 
 }

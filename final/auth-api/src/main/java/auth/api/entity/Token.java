@@ -1,8 +1,12 @@
-package auth.api.services;
+package auth.api.entity;
 
 public class Token {
 
     private String token;
+
+    public Token() {
+
+    }
 
     public Token(String token) {
         setToken(token);

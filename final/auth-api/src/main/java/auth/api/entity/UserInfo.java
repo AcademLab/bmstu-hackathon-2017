@@ -1,4 +1,4 @@
-package auth.api.userinfo;
+package auth.api.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -9,6 +9,10 @@ public class UserInfo {
     @Id
     private String login;
     private String passwordHash;
+
+    public UserInfo() {
+
+    }
 
     public void setLogin(String login) {
         this.login = login;
