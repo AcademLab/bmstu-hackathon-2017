@@ -2,10 +2,8 @@ package auth.api.services.auth;
 
 import auth.api.exceptions.FailedPasswordException;
 import auth.api.exceptions.LoginNotFoundException;
-import auth.api.services.UserInfo;
-import auth.api.services.UserInfoRepository;
-import auth.api.services.token.Token;
-import auth.api.services.token.TokenService;
+import auth.api.userinfo.UserInfo;
+import auth.api.userinfo.UserInfoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,9 +12,6 @@ public class AuthService {
 
     @Autowired
     private UserInfoRepository userInfoRepository;
-
-    @Autowired
-    private TokenService tokenService;
 
     public Token auth(UserInfo receivedInfo) {
 
@@ -32,7 +27,9 @@ public class AuthService {
             throw new FailedPasswordException();
         }
 
-        return tokenService.createToken(authInfo.getLogin());
+        // todo вызвать сервис для шифрования токена
+
+        return new Token("some_token");
     }
 
 }
