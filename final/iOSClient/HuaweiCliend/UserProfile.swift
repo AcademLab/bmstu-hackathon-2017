@@ -21,32 +21,32 @@ enum UserProfileError : Error {
 }
 
 protocol UserProfileModel {
-	func login() -> String?
-	func password() -> String?
-	func token() -> String?
-	func pinCode() -> String?
+	func login() -> Data?
+	func password() -> Data?
+	func token() -> Data?
+	func pinCode() -> Data?
 	
 	static func isAuthorized() -> Bool
 	static func clearData() throws
 	
-	func updateLogin(_ newLogin : String) throws
-	func updatePassword(_ newPassword : String) throws
-	func updateToken(_ newToken : String) throws
-	func updatePincode(_ pinCode : String) throws
+	func updateLogin(_ newLogin : Data) throws
+	func updatePassword(_ newPassword : Data) throws
+	func updateToken(_ newToken : Data) throws
+	func updatePincode(_ pinCode : Data) throws
 }
 
 class ALUserProfileModel : UserProfileModel {
-	func login() -> String? {
-		return KeychainSwift().get(kLoginKey)
+	func login() -> Data? {
+		return KeychainSwift().getData(kLoginKey)
 	}
-	func password() -> String? {
-		return KeychainSwift().get(kPasswordKey)
+	func password() -> Data? {
+		return KeychainSwift().getData(kPasswordKey)
 	}
-	func token() ->  String? {
-		return KeychainSwift().get(kTokenKey)
+	func token() ->  Data? {
+		return KeychainSwift().getData(kTokenKey)
 	}
-	func pinCode() -> String? {
-		return KeychainSwift().get(kPinCodeKey)
+	func pinCode() -> Data? {
+		return KeychainSwift().getData(kPinCodeKey)
 	}
 	
 	static func isAuthorized() -> Bool {
@@ -63,7 +63,7 @@ class ALUserProfileModel : UserProfileModel {
 	
 	static func clearData() throws {
 		for key in [kLoginKey, kPasswordKey, kTokenKey, kPinCodeKey] {
-			guard KeychainSwift().get(key) != nil else {
+			guard KeychainSwift().getData(key) != nil else {
 				continue
 			}
 			
@@ -73,23 +73,23 @@ class ALUserProfileModel : UserProfileModel {
 		}
 	}
 	
-	func updateLogin(_ newLogin : String) throws {
+	func updateLogin(_ newLogin : Data) throws {
 		guard KeychainSwift().set(newLogin, forKey: kLoginKey) else {
 			throw UserProfileError.unableToSave
 		}
 	}
 	
-	func updatePassword(_ newPassword : String) throws {
+	func updatePassword(_ newPassword : Data) throws {
 		guard KeychainSwift().set(newPassword, forKey: kPasswordKey) else {
 			throw UserProfileError.unableToSave
 		}
 	}
-	func updateToken(_ newToken : String) throws {
+	func updateToken(_ newToken : Data) throws {
 		guard KeychainSwift().set(newToken, forKey: kTokenKey) else {
 			throw UserProfileError.unableToSave
 		}
 	}
-	func updatePincode(_ pinCode : String) throws {
+	func updatePincode(_ pinCode : Data) throws {
 		guard KeychainSwift().set(pinCode, forKey: kPinCodeKey) else {
 			throw UserProfileError.unableToSave
 		}

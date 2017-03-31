@@ -71,7 +71,12 @@ class ALPinCodeViewModel : PinCodeViewModel {
 			return
 		}
 		
-		guard userProfile.pinCode()?.decryptedByIMEI() == pincode else {
+		guard let decryptedPinCode = try? userProfile.pinCode()?.decryptedByIMEI() else {
+			self.delegate?.didFailPincodeVerification(withErrMsg: "Не смогли достать пинкод...😰")
+			return
+		}
+		
+		guard decryptedPinCode == pincode else {
 			pinCodeattemps -= 1
 			self.delegate?.didFailPincodeVerification(withErrMsg: "Неверный пинкод 😝. Осталось попыток \(pinCodeattemps)")
 			return
