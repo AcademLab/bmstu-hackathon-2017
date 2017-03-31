@@ -1,4 +1,4 @@
-package auth.api.services.auth;
+package auth.api.services;
 
 public class Cryptographer {
 

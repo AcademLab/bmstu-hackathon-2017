@@ -2,12 +2,12 @@ package auth.api.controllers;
 
 import auth.api.exceptions.FailedPasswordException;
 import auth.api.exceptions.LoginNotFoundException;
-import auth.api.services.auth.Token;
+import auth.api.services.Token;
 import auth.api.userinfo.UserInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-import auth.api.services.auth.AuthService;
+import auth.api.services.AuthService;
 
 @RestController
 public class AuthController {

@@ -1,4 +1,4 @@
-package auth.api.services.auth;
+package auth.api.services;
 
 import auth.api.exceptions.FailedPasswordException;
 import auth.api.exceptions.LoginNotFoundException;
