@@ -54,8 +54,9 @@ class AcademSignInViewModel : SignInViewModel{
 		switch error ?? SignInError.unknown {
 		case SignInError.invalidRequest:
 			return "Invalid request."
-		case SignInError.networkError(let networkError):
-			return AcademSignInViewModel.string(from: networkError)
+		case SignInError.networkError(let errMsg, _):
+			return errMsg
+//			return AcademSignInViewModel.string(from: networkError)
 		default:
 			return "Unknown error"
 		}

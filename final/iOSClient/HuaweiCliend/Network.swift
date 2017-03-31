@@ -52,9 +52,9 @@ class Network : NSObject, URLSessionDelegate {
 			guard httpStatus?.statusCode == 200 else {
 				switch(httpStatus?.statusCode ?? 0){
 				case 401:
-					completion(nil, .unauthorized)
+					completion(data, .unauthorized)
 				default:
-					completion(nil, .unknown)
+					completion(data, .unknown)
 				}
 				return
 			}
