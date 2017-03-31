@@ -24,7 +24,7 @@ protocol UserProfileModel {
 	func login() -> String?
 	func password() -> String?
 	func token() -> String?
-	func pinCode() -> Bool?
+	func pinCode() -> String?
 	
 	static func isAuthorized() -> Bool
 	static func clearData() throws
@@ -32,7 +32,7 @@ protocol UserProfileModel {
 	func updateLogin(_ newLogin : String) throws
 	func updatePassword(_ newPassword : String) throws
 	func updateToken(_ newToken : String) throws
-	func updatePincode(_ pinCodeFlag : Bool) throws
+	func updatePincode(_ pinCode : String) throws
 }
 
 class ALUserProfileModel : UserProfileModel {
@@ -43,10 +43,10 @@ class ALUserProfileModel : UserProfileModel {
 		return KeychainSwift().get(kPasswordKey)
 	}
 	func token() ->  String? {
-		return KeychainSwift().get(kLoginKey)
+		return KeychainSwift().get(kTokenKey)
 	}
-	func pinCode() -> Bool? {
-		return KeychainSwift().getBool(kPinCodeKey)
+	func pinCode() -> String? {
+		return KeychainSwift().get(kPinCodeKey)
 	}
 	
 	static func isAuthorized() -> Bool {
@@ -59,8 +59,14 @@ class ALUserProfileModel : UserProfileModel {
 		
 		return true
 	}
+	
+	
 	static func clearData() throws {
-		for key in [kLoginKey, kPasswordKey, kTokenKey] {
+		for key in [kLoginKey, kPasswordKey, kTokenKey, kPinCodeKey] {
+			guard KeychainSwift().get(key) != nil else {
+				continue
+			}
+			
 			guard KeychainSwift().delete(key) else {
 				throw UserProfileError.unableToSave
 			}
@@ -83,8 +89,8 @@ class ALUserProfileModel : UserProfileModel {
 			throw UserProfileError.unableToSave
 		}
 	}
-	func updatePincode(_ pinCodeFlag : Bool) throws {
-		guard KeychainSwift().set(pinCodeFlag, forKey: kPinCodeKey) else {
+	func updatePincode(_ pinCode : String) throws {
+		guard KeychainSwift().set(pinCode, forKey: kPinCodeKey) else {
 			throw UserProfileError.unableToSave
 		}
 	}
