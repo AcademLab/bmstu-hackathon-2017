@@ -35,3 +35,13 @@ secondstep/iOSClient/HuaweiCliend.xcworkspace/xcuserdata/aminbenarieb.xcuserdata
 
 /secondstep/iOSClient/Pods/*
 /secondstep/iOSClient/Podfile.lock
+
+
+
+/final/auth-api/.idea/*
+/final/auth-api/.gradle/*
+/final/auth-api/build/*
+/final/auth-api/out/*
+/final/auth-api/gradlew
+/final/auth-api/gradlew.bat
+/final/auth-api/gradle/*
