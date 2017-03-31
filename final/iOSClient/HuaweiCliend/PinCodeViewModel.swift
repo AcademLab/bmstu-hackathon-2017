@@ -58,10 +58,10 @@ class ALPinCodeViewModel : PinCodeViewModel {
 			let password = ALKeychainer.sharedInstance.password
 			let token = ALKeychainer.sharedInstance.token
 			
-			try? self.userProfile.updateLogin(login.encodedByIMEI().encoded(byPinCode: pincode))
-			try? self.userProfile.updatePassword(password.encodedByIMEI().encoded(byPinCode: pincode))
-			try? self.userProfile.updateToken(token.encodedByIMEI().encoded(byPinCode: pincode))
-			try? self.userProfile.updatePincode(pincode)
+			try? self.userProfile.updateLogin(login.crypted(byPinCode: pincode))
+			try? self.userProfile.updatePassword(password.crypted(byPinCode: pincode))
+			try? self.userProfile.updateToken(token.crypted(byPinCode: pincode))
+			try? self.userProfile.updatePincode(pincode.cryptedByIMEI())
 			
 			
 			DispatchQueue.main.async {
@@ -71,7 +71,7 @@ class ALPinCodeViewModel : PinCodeViewModel {
 			return
 		}
 		
-		guard userProfile.pinCode() == pincode else {
+		guard userProfile.pinCode()?.decryptedByIMEI() == pincode else {
 			pinCodeattemps -= 1
 			self.delegate?.didFailPincodeVerification(withErrMsg: "Неверный пинкод 😝. Осталось попыток \(pinCodeattemps)")
 			return

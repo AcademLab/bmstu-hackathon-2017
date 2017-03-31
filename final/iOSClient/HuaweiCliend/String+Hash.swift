@@ -7,34 +7,31 @@
 //
 
 import Foundation
+import SwiftHash
 
 extension String {
 	
 	// Encoding
 	
-	func encoded() -> String {
-		return self + "_enconded_general"
+	public func encoded() -> String {
+		return MD5(self)
 	}
 	
-	func encodedByIMEI() -> String {
+	public func cryptedByIMEI() -> String {
 		return self + "_enconded_IMEI"
 	}
 	
-	func encoded(byPinCode pincode : String) -> String{
+	public func crypted(byPinCode pincode : String) -> String{
 		return self + "encoded_\(pincode)"
 	}
 	
 	// MARK : Decoding
 	
-	func decoded() -> String {
+	public func decryptedByIMEI() -> String {
 		return self
 	}
 	
-	func decodedByIMEI() -> String {
-		return self
-	}
-	
-	func decoded(byPinCode pincode : String) -> String {
+	public func decrypted(byPinCode pincode : String) -> String {
 		return self
 	}
 }
