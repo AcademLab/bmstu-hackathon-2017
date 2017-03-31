@@ -11,6 +11,7 @@ target 'Emojuirity' do
   pod 'DeviceGuru'
   pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
   pod 'SwiftHash', git: 'https://github.com/onmyway133/SwiftHash'
+  pod 'RNCryptor', '~> 5.0'
 
   target 'EmojuirityTests' do
     inherit! :search_paths
