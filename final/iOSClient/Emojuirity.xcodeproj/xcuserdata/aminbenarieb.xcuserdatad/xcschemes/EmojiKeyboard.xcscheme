@@ -43,13 +43,23 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "FC3CAF761E8F002800D065AA"
+               BuildableName = "EmojuirityTests.xctest"
+               BlueprintName = "EmojuirityTests"
+               ReferencedContainer = "container:Emojuirity.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FCCD22F11E8E9345004699DC"
-            BuildableName = "EmojiKeyboard.appex"
-            BlueprintName = "EmojiKeyboard"
+            BlueprintIdentifier = "FC4161411E89A8B100919384"
+            BuildableName = "Emojuirity.app"
+            BlueprintName = "Emojuirity"
             ReferencedContainer = "container:Emojuirity.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

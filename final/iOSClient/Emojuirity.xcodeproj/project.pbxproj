@@ -7,17 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E3924A2C9D42759201F0F6EC /* Pods_HuaweiCliendTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7D1A0574E692E9046378C15 /* Pods_HuaweiCliendTests.framework */; };
+		4904CDEC576D758CF7F5AAE4 /* Pods_EmojuirityTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFC63C7C7CFB52EF49A50DFC /* Pods_EmojuirityTests.framework */; };
+		EA0322CBF0A6A01553B4A79B /* Pods_Emojuirity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06C7FD0234BCACB74F48031A /* Pods_Emojuirity.framework */; };
 		EF3803BA474A53FA7EFC22F6 /* Pods_HuaweiCliend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 401ABDA457C5238DA6B7B12A /* Pods_HuaweiCliend.framework */; };
-		FC0B635C1E8EC54800BA77A8 /* String+Hash.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0B635B1E8EC54800BA77A8 /* String+Hash.swift */; };
 		FC0B635E1E8ECCCE00BA77A8 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0B635D1E8ECCCE00BA77A8 /* Device.swift */; };
 		FC0B63601E8ECD7D00BA77A8 /* Keychainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0B635F1E8ECD7D00BA77A8 /* Keychainer.swift */; };
 		FC3CAF701E8ED8A200D065AA /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3CAF6F1E8ED8A200D065AA /* Application.swift */; };
 		FC3CAF721E8EDC1E00D065AA /* PinCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3CAF711E8EDC1E00D065AA /* PinCodeViewModel.swift */; };
+		FC3CAF831E8F009600D065AA /* Emojurity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3CAF821E8F009600D065AA /* Emojurity.swift */; };
+		FC3CAF851E8F00D900D065AA /* String+Hash.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0B635B1E8EC54800BA77A8 /* String+Hash.swift */; };
 		FC4161461E89A8B100919384 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4161451E89A8B100919384 /* AppDelegate.swift */; };
 		FC41614D1E89A8B100919384 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC41614B1E89A8B100919384 /* Main.storyboard */; };
 		FC4161521E89A8B100919384 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC4161501E89A8B100919384 /* LaunchScreen.storyboard */; };
-		FC41615D1E89A8B100919384 /* HuaweiCliendTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC41615C1E89A8B100919384 /* HuaweiCliendTests.swift */; };
 		FC41616D1E89B02F00919384 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC41616C1E89B02F00919384 /* Network.swift */; };
 		FC4161711E89B42800919384 /* SignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4161701E89B42800919384 /* SignViewController.swift */; };
 		FC4161751E89B67B00919384 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4161741E89B67B00919384 /* UserProfile.swift */; };
@@ -40,12 +41,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		FC4161591E89A8B100919384 /* PBXContainerItemProxy */ = {
+		FC3CAF7C1E8F002800D065AA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FC41613A1E89A8B100919384 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = FC4161411E89A8B100919384;
-			remoteInfo = HuaweiCliend;
+			remoteInfo = Emojuirity;
 		};
 		FCCD22F71E8E9345004699DC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -71,24 +72,30 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		06C7FD0234BCACB74F48031A /* Pods_Emojuirity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Emojuirity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		127F25EA8D4F3A64DDB5B555 /* Pods-HuaweiCliendTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HuaweiCliendTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HuaweiCliendTests/Pods-HuaweiCliendTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1BEA9FBD4E7F9B4499A0A2F9 /* Pods-HuaweiCliendTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HuaweiCliendTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HuaweiCliendTests/Pods-HuaweiCliendTests.release.xcconfig"; sourceTree = "<group>"; };
 		401ABDA457C5238DA6B7B12A /* Pods_HuaweiCliend.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HuaweiCliend.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		69E18758C253315C632033FE /* Pods-EmojuirityTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmojuirityTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmojuirityTests/Pods-EmojuirityTests.release.xcconfig"; sourceTree = "<group>"; };
 		7BE932210A5DC25EADE6BB1C /* Pods-HuaweiCliend.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HuaweiCliend.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HuaweiCliend/Pods-HuaweiCliend.debug.xcconfig"; sourceTree = "<group>"; };
+		849C3E57E52CB015DE95EE0F /* Pods-EmojuirityTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmojuirityTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmojuirityTests/Pods-EmojuirityTests.debug.xcconfig"; sourceTree = "<group>"; };
 		933AECD11C931F87B84023FD /* Pods-HuaweiCliend.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HuaweiCliend.release.xcconfig"; path = "Pods/Target Support Files/Pods-HuaweiCliend/Pods-HuaweiCliend.release.xcconfig"; sourceTree = "<group>"; };
 		C7D1A0574E692E9046378C15 /* Pods_HuaweiCliendTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HuaweiCliendTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DED3113D7B71ED7F9A2A6135 /* Pods-Emojuirity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emojuirity.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Emojuirity/Pods-Emojuirity.debug.xcconfig"; sourceTree = "<group>"; };
+		EFC63C7C7CFB52EF49A50DFC /* Pods_EmojuirityTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmojuirityTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB2978F539F69489521CE3E5 /* Pods-Emojuirity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emojuirity.release.xcconfig"; path = "Pods/Target Support Files/Pods-Emojuirity/Pods-Emojuirity.release.xcconfig"; sourceTree = "<group>"; };
 		FC0B635B1E8EC54800BA77A8 /* String+Hash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Hash.swift"; sourceTree = "<group>"; };
 		FC0B635D1E8ECCCE00BA77A8 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		FC0B635F1E8ECD7D00BA77A8 /* Keychainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keychainer.swift; sourceTree = "<group>"; };
 		FC3CAF6F1E8ED8A200D065AA /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		FC3CAF711E8EDC1E00D065AA /* PinCodeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinCodeViewModel.swift; sourceTree = "<group>"; };
+		FC3CAF771E8F002800D065AA /* EmojuirityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmojuirityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC3CAF821E8F009600D065AA /* Emojurity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Emojurity.swift; sourceTree = "<group>"; };
 		FC4161421E89A8B100919384 /* Emojuirity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Emojuirity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC4161451E89A8B100919384 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC41614C1E89A8B100919384 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FC4161511E89A8B100919384 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC4161531E89A8B100919384 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FC4161581E89A8B100919384 /* EmojuirityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmojuirityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FC41615C1E89A8B100919384 /* HuaweiCliendTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuaweiCliendTests.swift; sourceTree = "<group>"; };
 		FC41615E1E89A8B100919384 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC41616C1E89B02F00919384 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		FC4161701E89B42800919384 /* SignViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignViewController.swift; sourceTree = "<group>"; };
@@ -113,20 +120,21 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		FC3CAF741E8F002800D065AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4904CDEC576D758CF7F5AAE4 /* Pods_EmojuirityTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FC41613F1E89A8B100919384 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				FC8E6AAB1E8B291500605214 /* MapKit.framework in Frameworks */,
 				EF3803BA474A53FA7EFC22F6 /* Pods_HuaweiCliend.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FC4161551E89A8B100919384 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E3924A2C9D42759201F0F6EC /* Pods_HuaweiCliendTests.framework in Frameworks */,
+				EA0322CBF0A6A01553B4A79B /* Pods_Emojuirity.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +155,10 @@
 				933AECD11C931F87B84023FD /* Pods-HuaweiCliend.release.xcconfig */,
 				127F25EA8D4F3A64DDB5B555 /* Pods-HuaweiCliendTests.debug.xcconfig */,
 				1BEA9FBD4E7F9B4499A0A2F9 /* Pods-HuaweiCliendTests.release.xcconfig */,
+				DED3113D7B71ED7F9A2A6135 /* Pods-Emojuirity.debug.xcconfig */,
+				FB2978F539F69489521CE3E5 /* Pods-Emojuirity.release.xcconfig */,
+				849C3E57E52CB015DE95EE0F /* Pods-EmojuirityTests.debug.xcconfig */,
+				69E18758C253315C632033FE /* Pods-EmojuirityTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -157,6 +169,8 @@
 				FC8E6AAA1E8B291500605214 /* MapKit.framework */,
 				401ABDA457C5238DA6B7B12A /* Pods_HuaweiCliend.framework */,
 				C7D1A0574E692E9046378C15 /* Pods_HuaweiCliendTests.framework */,
+				06C7FD0234BCACB74F48031A /* Pods_Emojuirity.framework */,
+				EFC63C7C7CFB52EF49A50DFC /* Pods_EmojuirityTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -165,7 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				FC4161441E89A8B100919384 /* Emojuirity */,
-				FC41615B1E89A8B100919384 /* HuaweiCliendTests */,
+				FC41615B1E89A8B100919384 /* EmojuirityTests */,
 				FCCD22F31E8E9345004699DC /* EmojiKeyboard */,
 				FC4161431E89A8B100919384 /* Products */,
 				9F4C48FE5A522DD94E18E14E /* Pods */,
@@ -177,8 +191,8 @@
 			isa = PBXGroup;
 			children = (
 				FC4161421E89A8B100919384 /* Emojuirity.app */,
-				FC4161581E89A8B100919384 /* EmojuirityTests.xctest */,
 				FCCD22F21E8E9345004699DC /* EmojiKeyboard.appex */,
+				FC3CAF771E8F002800D065AA /* EmojuirityTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -203,12 +217,13 @@
 			path = HuaweiCliend;
 			sourceTree = "<group>";
 		};
-		FC41615B1E89A8B100919384 /* HuaweiCliendTests */ = {
+		FC41615B1E89A8B100919384 /* EmojuirityTests */ = {
 			isa = PBXGroup;
 			children = (
-				FC41615C1E89A8B100919384 /* HuaweiCliendTests.swift */,
+				FC3CAF821E8F009600D065AA /* Emojurity.swift */,
 				FC41615E1E89A8B100919384 /* Info.plist */,
 			);
+			name = EmojuirityTests;
 			path = HuaweiCliendTests;
 			sourceTree = "<group>";
 		};
@@ -285,6 +300,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		FC3CAF761E8F002800D065AA /* EmojuirityTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC3CAF7E1E8F002800D065AA /* Build configuration list for PBXNativeTarget "EmojuirityTests" */;
+			buildPhases = (
+				70FC51ACF116949AB153E6D1 /* [CP] Check Pods Manifest.lock */,
+				FC3CAF731E8F002800D065AA /* Sources */,
+				FC3CAF741E8F002800D065AA /* Frameworks */,
+				FC3CAF751E8F002800D065AA /* Resources */,
+				B9519E19019E7BDFC4885317 /* [CP] Embed Pods Frameworks */,
+				780AA2EDBED95C11D838B223 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FC3CAF7D1E8F002800D065AA /* PBXTargetDependency */,
+			);
+			name = EmojuirityTests;
+			productName = EmojuirityTests;
+			productReference = FC3CAF771E8F002800D065AA /* EmojuirityTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		FC4161411E89A8B100919384 /* Emojuirity */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FC4161611E89A8B100919384 /* Build configuration list for PBXNativeTarget "Emojuirity" */;
@@ -306,27 +342,6 @@
 			productName = HuaweiCliend;
 			productReference = FC4161421E89A8B100919384 /* Emojuirity.app */;
 			productType = "com.apple.product-type.application";
-		};
-		FC4161571E89A8B100919384 /* EmojuirityTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FC4161641E89A8B100919384 /* Build configuration list for PBXNativeTarget "EmojuirityTests" */;
-			buildPhases = (
-				FCEA5C3572C82A0717A598ED /* [CP] Check Pods Manifest.lock */,
-				FC4161541E89A8B100919384 /* Sources */,
-				FC4161551E89A8B100919384 /* Frameworks */,
-				FC4161561E89A8B100919384 /* Resources */,
-				7F228E82B61696A51B98E6E9 /* [CP] Embed Pods Frameworks */,
-				C962670D19852805C399974B /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FC41615A1E89A8B100919384 /* PBXTargetDependency */,
-			);
-			name = EmojuirityTests;
-			productName = HuaweiCliendTests;
-			productReference = FC4161581E89A8B100919384 /* EmojuirityTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		FCCD22F11E8E9345004699DC /* EmojiKeyboard */ = {
 			isa = PBXNativeTarget;
@@ -355,6 +370,12 @@
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Amin Benarieb";
 				TargetAttributes = {
+					FC3CAF761E8F002800D065AA = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 5P8935L6RT;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FC4161411E89A8B100919384;
+					};
 					FC4161411E89A8B100919384 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 5P8935L6RT;
@@ -365,12 +386,6 @@
 								enabled = 1;
 							};
 						};
-					};
-					FC4161571E89A8B100919384 = {
-						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 5P8935L6RT;
-						ProvisioningStyle = Automatic;
-						TestTargetID = FC4161411E89A8B100919384;
 					};
 					FCCD22F11E8E9345004699DC = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -393,13 +408,20 @@
 			projectRoot = "";
 			targets = (
 				FC4161411E89A8B100919384 /* Emojuirity */,
-				FC4161571E89A8B100919384 /* EmojuirityTests */,
 				FCCD22F11E8E9345004699DC /* EmojiKeyboard */,
+				FC3CAF761E8F002800D065AA /* EmojuirityTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		FC3CAF751E8F002800D065AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FC4161401E89A8B100919384 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -407,13 +429,6 @@
 				FC4161521E89A8B100919384 /* LaunchScreen.storyboard in Resources */,
 				FCCD22ED1E8E8E82004699DC /* Assets.xcassets in Resources */,
 				FC41614D1E89A8B100919384 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FC4161561E89A8B100919384 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,7 +454,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HuaweiCliend/Pods-HuaweiCliend-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Emojuirity/Pods-Emojuirity-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		70FC51ACF116949AB153E6D1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		780AA2EDBED95C11D838B223 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EmojuirityTests/Pods-EmojuirityTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7CFDC7384D6F574462DAE469 /* [CP] Check Pods Manifest.lock */ = {
@@ -457,21 +502,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		7F228E82B61696A51B98E6E9 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HuaweiCliendTests/Pods-HuaweiCliendTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		9D308DFEC3399C1470D0DEE0 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -484,42 +514,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HuaweiCliend/Pods-HuaweiCliend-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Emojuirity/Pods-Emojuirity-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C962670D19852805C399974B /* [CP] Copy Pods Resources */ = {
+		B9519E19019E7BDFC4885317 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HuaweiCliendTests/Pods-HuaweiCliendTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FCEA5C3572C82A0717A598ED /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EmojuirityTests/Pods-EmojuirityTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		FC3CAF731E8F002800D065AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC3CAF831E8F009600D065AA /* Emojurity.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FC41613E1E89A8B100919384 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -533,7 +556,6 @@
 				FC41617B1E89C06900919384 /* SignInViewModel.swift in Sources */,
 				FC8E6A981E8AD86700605214 /* TabBarViewController.swift in Sources */,
 				FC8E6A921E8AD78500605214 /* NSObject.swift in Sources */,
-				FC0B635C1E8EC54800BA77A8 /* String+Hash.swift in Sources */,
 				FC8E6A851E8AC80700605214 /* UserProfileViewModel.swift in Sources */,
 				FC4161811E89D48700919384 /* Router.swift in Sources */,
 				FC4161461E89A8B100919384 /* AppDelegate.swift in Sources */,
@@ -542,17 +564,10 @@
 				FC0B63601E8ECD7D00BA77A8 /* Keychainer.swift in Sources */,
 				FC4161851E89E30200919384 /* UserProfileViewController.swift in Sources */,
 				FCCD23011E8EA82A004699DC /* PinCodeViewController.swift in Sources */,
+				FC3CAF851E8F00D900D065AA /* String+Hash.swift in Sources */,
 				FC8E6A901E8AD39200605214 /* AcademViewController.swift in Sources */,
 				FC4161711E89B42800919384 /* SignViewController.swift in Sources */,
 				FC3CAF721E8EDC1E00D065AA /* PinCodeViewModel.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FC4161541E89A8B100919384 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FC41615D1E89A8B100919384 /* HuaweiCliendTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -567,10 +582,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		FC41615A1E89A8B100919384 /* PBXTargetDependency */ = {
+		FC3CAF7D1E8F002800D065AA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FC4161411E89A8B100919384 /* Emojuirity */;
-			targetProxy = FC4161591E89A8B100919384 /* PBXContainerItemProxy */;
+			targetProxy = FC3CAF7C1E8F002800D065AA /* PBXContainerItemProxy */;
 		};
 		FCCD22F81E8E9345004699DC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -599,6 +614,36 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		FC3CAF7F1E8F002800D065AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 849C3E57E52CB015DE95EE0F /* Pods-EmojuirityTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 5P8935L6RT;
+				INFOPLIST_FILE = "/Users/aminbenarieb/GitHub/bmstu-hackathon-2017/final/iOSClient/HuaweiCliendTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.amin.benarieb.EmojuirityTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Emojuirity.app/Emojuirity";
+			};
+			name = Debug;
+		};
+		FC3CAF801E8F002800D065AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69E18758C253315C632033FE /* Pods-EmojuirityTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 5P8935L6RT;
+				INFOPLIST_FILE = "/Users/aminbenarieb/GitHub/bmstu-hackathon-2017/final/iOSClient/HuaweiCliendTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.amin.benarieb.EmojuirityTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Emojuirity.app/Emojuirity";
+			};
+			name = Release;
+		};
 		FC41615F1E89A8B100919384 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -694,7 +739,7 @@
 		};
 		FC4161621E89A8B100919384 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7BE932210A5DC25EADE6BB1C /* Pods-HuaweiCliend.debug.xcconfig */;
+			baseConfigurationReference = DED3113D7B71ED7F9A2A6135 /* Pods-Emojuirity.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -711,7 +756,7 @@
 		};
 		FC4161631E89A8B100919384 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 933AECD11C931F87B84023FD /* Pods-HuaweiCliend.release.xcconfig */;
+			baseConfigurationReference = FB2978F539F69489521CE3E5 /* Pods-Emojuirity.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -722,38 +767,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.amin.benarieb.HuaweiCliend;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		FC4161651E89A8B100919384 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 127F25EA8D4F3A64DDB5B555 /* Pods-HuaweiCliendTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = 5P8935L6RT;
-				INFOPLIST_FILE = HuaweiCliendTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.amin.benarieb.HuaweiCliendTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Emojuirity.app/Emojuirity";
-			};
-			name = Debug;
-		};
-		FC4161661E89A8B100919384 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1BEA9FBD4E7F9B4499A0A2F9 /* Pods-HuaweiCliendTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = 5P8935L6RT;
-				INFOPLIST_FILE = HuaweiCliendTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.amin.benarieb.HuaweiCliendTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Emojuirity.app/Emojuirity";
 			};
 			name = Release;
 		};
@@ -786,6 +799,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		FC3CAF7E1E8F002800D065AA /* Build configuration list for PBXNativeTarget "EmojuirityTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC3CAF7F1E8F002800D065AA /* Debug */,
+				FC3CAF801E8F002800D065AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		FC41613D1E89A8B100919384 /* Build configuration list for PBXProject "Emojuirity" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -800,15 +822,6 @@
 			buildConfigurations = (
 				FC4161621E89A8B100919384 /* Debug */,
 				FC4161631E89A8B100919384 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FC4161641E89A8B100919384 /* Build configuration list for PBXNativeTarget "EmojuirityTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FC4161651E89A8B100919384 /* Debug */,
-				FC4161661E89A8B100919384 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
