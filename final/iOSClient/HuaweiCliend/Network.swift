@@ -19,21 +19,25 @@ enum NetworkError {
 	case unreachable
 }
 
-class Network {
+class Network : NSObject, URLSessionDelegate {
 
-	static func sendRequest(url : String, jsonData : Data, completion : @escaping NetworkCompletion) {
+	func sendRequest(url : String, jsonData : Data, completion : @escaping NetworkCompletion) {
 		
 		guard let url = URL(string: url) else {
 			completion(nil, .invalidRequest)
 			return
 		}
 		
+		let defaultConfigObject = URLSessionConfiguration.default
+		let defaultSession = URLSession(configuration: defaultConfigObject,
+		                                delegate: self,
+		                                delegateQueue: OperationQueue.main)
 		var request = URLRequest(url: url)
 		request.httpMethod = "POST"
 		request.httpBody = jsonData
 		request.addValue("application/json", forHTTPHeaderField: "Content-Type")
 		request.addValue("application/json", forHTTPHeaderField: "Accept")
-		let task = URLSession.shared.dataTask(with: request) { data, response, error in
+		let task = defaultSession.dataTask(with: request) { data, response, error in
 			guard let data = data else {
 				completion(nil, .unreachable)
 				return
@@ -97,5 +101,13 @@ class Network {
 		task.resume()
 		
 	}
+	
+	// MARK : Delegate
+	
+	func urlSession(_ session: URLSession, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
+		
+		completionHandler(.useCredential, URLCredential(trust: challenge.protectionSpace.serverTrust!))
+	}
+	
 	
 }
