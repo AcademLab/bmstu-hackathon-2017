@@ -30,17 +30,6 @@
 	</array>
 	<key>NSAppTransportSecurity</key>
 	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-		<key>NSExceptionDomains</key>
-		<dict>
-			<key>212.116.121.122:8080</key>
-			<string></string>
-			<key>huawei.com</key>
-			<string></string>
-			<key>www.huawei.com</key>
-			<string></string>
-		</dict>
 	</dict>
 	<key>UIStatusBarTintParameters</key>
 	<dict>

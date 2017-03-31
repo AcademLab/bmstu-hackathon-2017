@@ -9,11 +9,12 @@
 import Foundation
 import SwiftyJSON
 
-fileprivate let kAuthKey = "authenticate"
-fileprivate let kHostKey = "http://212.116.121.122:8080"
+fileprivate let kAuthKey = "auth"
+fileprivate let kHostKey = "https://5.101.77.77:8090"
 fileprivate let kLoginKey = "login"
-fileprivate let kPasswordKey = "password"
+fileprivate let kPasswordKey = "passwordHash"
 fileprivate let kTokenKey = "token"
+fileprivate let kMsgKey = "message"
 
 typealias SignInCompletion = (String?, SignInError?) -> (Void)
 
@@ -23,8 +24,9 @@ protocol SignInModel {
 
 enum SignInError {
 	case unknown
+	case unreachable
 	case invalidRequest
-	case networkError(NetworkError?)
+	case networkError(String, NetworkError?)
 }
 
 class AcademSignInModel : SignInModel {
@@ -33,26 +35,29 @@ class AcademSignInModel : SignInModel {
 		let authUrl = url(forKey: kAuthKey)
 		
 		let json: [String: Any] = [kLoginKey: login,
-		                           kPasswordKey: password.encoded() ]
+		                           kPasswordKey: password ]
 		
 		guard let jsonData = try? JSONSerialization.data(withJSONObject: json) else {
 			completion(.none, .invalidRequest)
 			return
 		}
 		
-		Network.sendRequest(url: authUrl, jsonData: jsonData) { (JSONData, error) -> (Void) in
+		Network().sendRequest(url: authUrl, jsonData: jsonData) { (JSONData, error) -> (Void) in
+			
 			guard let JSONData = JSONData else {
-				completion(.none, .networkError( .unreachable ) )
+				completion(.none, .unreachable )
 				return
 			}
+			let json = JSON(JSONData)
+			let errMsg = json[kMsgKey].string ?? ""
+			
 			if let error = error {
-				completion(.none, .networkError( error ))
+				completion(.none, .networkError(errMsg, error ))
 				return
 			}
 			
-			let json = JSON(JSONData)
 			guard let token = json[kTokenKey].string else {
-				completion(.none, .networkError(.invalidRequest) )
+				completion(.none, .networkError(errMsg, .invalidRequest) )
 				return
 			}
 			
