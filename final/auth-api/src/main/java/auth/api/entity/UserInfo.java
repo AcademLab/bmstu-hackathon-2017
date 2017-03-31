@@ -10,6 +10,10 @@ public class UserInfo {
     private String login;
     private String passwordHash;
 
+    public UserInfo() {
+
+    }
+
     public void setLogin(String login) {
         this.login = login;
     }
