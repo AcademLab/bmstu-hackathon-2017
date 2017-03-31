@@ -1,0 +1,20 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'HuaweiCliend' do
+  use_frameworks!
+
+  pod 'KeychainSwift', '~> 7.0'
+  pod 'Alamofire', '~> 4.1'
+  pod 'AlamofireRSSParser'
+  pod 'SwiftyJSON', '~> 3.1'
+  pod 'DeviceGuru'
+  pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
+
+
+  target 'HuaweiCliendTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
