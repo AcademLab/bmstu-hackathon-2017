@@ -9,10 +9,10 @@
 import Foundation
 import SwiftyJSON
 
-fileprivate let kAuthKey = "authenticate"
-fileprivate let kHostKey = "http://212.116.121.122:8080"
+fileprivate let kAuthKey = "auth"
+fileprivate let kHostKey = "https://5.101.77.77:8090"
 fileprivate let kLoginKey = "login"
-fileprivate let kPasswordKey = "password"
+fileprivate let kPasswordKey = "passwordHash"
 fileprivate let kTokenKey = "token"
 
 typealias SignInCompletion = (String?, SignInError?) -> (Void)
