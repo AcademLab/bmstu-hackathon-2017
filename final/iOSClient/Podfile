@@ -1,7 +1,7 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
-target 'HuaweiCliend' do
+target 'Emojuirity' do
   use_frameworks!
 
   pod 'KeychainSwift', '~> 7.0'
