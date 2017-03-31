@@ -22,8 +22,16 @@ class Emojurity: XCTestCase {
 	
 	func testEncoding() {
 		let password = "academic"
-		debugPrint( password.encoded() )
-		
+		XCTAssertTrue(password.encoded() != password )
 	}
 	
+	func testCrypt() {
+		let data = "data"
+		let pincode = "1234"
+		let crypted = try? data.crypted(byPinCode: pincode)
+		let expected = "data"
+		let decrypted = try? crypted?.decrypted(byPinCode: pincode)
+		
+		XCTAssertTrue( expected == decrypted!! )
+	}
 }

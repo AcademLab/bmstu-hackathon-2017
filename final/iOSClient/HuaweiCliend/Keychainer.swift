@@ -21,11 +21,7 @@ class ALKeychainer : Keychainer {
 	
 	internal static var sharedInstance: Keychainer = ALKeychainer()
 	
-	var login : String = "" {
-		didSet {
-			login = login.encoded()
-		}
-	}
+	var login : String = "" 
 	var password : String = "" {
 		didSet {
 			password = password.encoded()
