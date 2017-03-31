@@ -35,7 +35,8 @@ secondstep/iOSClient/HuaweiCliend.xcworkspace/xcuserdata/aminbenarieb.xcuserdata
 
 /secondstep/iOSClient/Pods/*
 /secondstep/iOSClient/Podfile.lock
-
+/final/iOSClient/Pods/*
+/final/iOSClient/Podfile.lock
 
 
 /final/auth-api/.idea/*
