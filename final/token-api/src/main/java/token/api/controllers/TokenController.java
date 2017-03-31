@@ -1,7 +1,7 @@
 package token.api.controllers;
 
-import token.api.Token;
-import token.api.UserInfo;
+import token.api.entity.Token;
+import token.api.entity.UserInfo;
 import token.api.services.TokenService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

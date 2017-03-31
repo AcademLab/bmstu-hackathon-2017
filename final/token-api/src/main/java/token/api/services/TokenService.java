@@ -1,17 +1,25 @@
 package token.api.services;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import token.api.Token;
-import token.api.UserInfo;
+import token.api.entity.Token;
+import token.api.entity.UserInfo;
+import token.api.cache.TokenCache;
+import java.util.GregorianCalendar;
 
 @Service
 public class TokenService {
 
+    @Autowired
+    private TokenCache cache;
+
     public Token wrap(UserInfo userInfo) {
-        return new Token("lala");
+        Token token = new Token(Long.toString(new GregorianCalendar().getTimeInMillis()));
+        cache.setUserInfo(token, userInfo);
+        return token;
     }
 
     public UserInfo unWrap(Token token) {
-        return new UserInfo("lala");
+        return cache.getUserInfo(token);
     }
 }
