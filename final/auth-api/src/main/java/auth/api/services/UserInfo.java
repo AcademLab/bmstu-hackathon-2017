@@ -1,7 +1,12 @@
 package auth.api.services;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class UserInfo {
 
+    @Id
     private String login;
     private String passwordHash;
 
