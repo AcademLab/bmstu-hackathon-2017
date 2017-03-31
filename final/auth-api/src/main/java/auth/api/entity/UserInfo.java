@@ -1,4 +1,4 @@
-package auth.api.userinfo;
+package auth.api.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

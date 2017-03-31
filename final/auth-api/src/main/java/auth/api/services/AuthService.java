@@ -1,9 +1,10 @@
 package auth.api.services;
 
+import auth.api.entity.Token;
 import auth.api.exceptions.FailedPasswordException;
 import auth.api.exceptions.LoginNotFoundException;
-import auth.api.userinfo.UserInfo;
-import auth.api.userinfo.UserInfoRepository;
+import auth.api.entity.UserInfo;
+import auth.api.repository.UserInfoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,7 +21,7 @@ public class AuthService {
         if (authInfo == null)
             throw new LoginNotFoundException();
 
-        Cryptographer cryptographer = new Cryptographer();
+        CryptographyService cryptographer = new CryptographyService();
 
         if (!authInfo.getPasswordHash().equals(cryptographer.encrypt(receivedInfo.getPasswordHash()))) {
             // todo Инкрементировать количество неуспешных попыток и тд

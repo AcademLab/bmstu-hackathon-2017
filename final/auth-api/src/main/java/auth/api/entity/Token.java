@@ -1,4 +1,4 @@
-package auth.api.services;
+package auth.api.entity;
 
 public class Token {
 
