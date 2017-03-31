@@ -35,7 +35,7 @@ class AcademSignInModel : SignInModel {
 		let authUrl = url(forKey: kAuthKey)
 		
 		let json: [String: Any] = [kLoginKey: login,
-		                           kPasswordKey: password.encoded() ]
+		                           kPasswordKey: password ]
 		
 		guard let jsonData = try? JSONSerialization.data(withJSONObject: json) else {
 			completion(.none, .invalidRequest)
