@@ -36,8 +36,6 @@
 		FC8E6AAB1E8B291500605214 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC8E6AAA1E8B291500605214 /* MapKit.framework */; };
 		FC8E6AB11E8B381A00605214 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8E6AB01E8B381A00605214 /* Theme.swift */; };
 		FCCD22ED1E8E8E82004699DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCCD22EC1E8E8E82004699DC /* Assets.xcassets */; };
-		FCCD22F51E8E9345004699DC /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCD22F41E8E9345004699DC /* KeyboardViewController.swift */; };
-		FCCD22F91E8E9345004699DC /* EmojiKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FCCD22F21E8E9345004699DC /* EmojiKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FCCD23011E8EA82A004699DC /* PinCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCD23001E8EA82A004699DC /* PinCodeViewController.swift */; };
 		FCCD23071E8EB187004699DC /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCD23061E8EB187004699DC /* Int.swift */; };
 /* End PBXBuildFile section */
@@ -50,13 +48,6 @@
 			remoteGlobalIDString = FC4161411E89A8B100919384;
 			remoteInfo = Emojuirity;
 		};
-		FCCD22F71E8E9345004699DC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FC41613A1E89A8B100919384 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FCCD22F11E8E9345004699DC;
-			remoteInfo = EmojiKeyboard;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -66,7 +57,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				FCCD22F91E8E9345004699DC /* EmojiKeyboard.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -117,9 +107,6 @@
 		FC8E6AAA1E8B291500605214 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		FC8E6AB01E8B381A00605214 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Theme.swift; path = ../Theme.swift; sourceTree = "<group>"; };
 		FCCD22EC1E8E8E82004699DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FCCD22F21E8E9345004699DC /* EmojiKeyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = EmojiKeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		FCCD22F41E8E9345004699DC /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
-		FCCD22F61E8E9345004699DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCCD23001E8EA82A004699DC /* PinCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinCodeViewController.swift; sourceTree = "<group>"; };
 		FCCD23061E8EB187004699DC /* Int.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -139,13 +126,6 @@
 			files = (
 				FC8E6AAB1E8B291500605214 /* MapKit.framework in Frameworks */,
 				EA0322CBF0A6A01553B4A79B /* Pods_Emojuirity.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FCCD22EF1E8E9345004699DC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,7 +164,6 @@
 			children = (
 				FC4161441E89A8B100919384 /* Emojuirity */,
 				FC41615B1E89A8B100919384 /* EmojuirityTests */,
-				FCCD22F31E8E9345004699DC /* EmojiKeyboard */,
 				FC4161431E89A8B100919384 /* Products */,
 				9F4C48FE5A522DD94E18E14E /* Pods */,
 				E85B4F14C6595F0ABD86C383 /* Frameworks */,
@@ -195,7 +174,6 @@
 			isa = PBXGroup;
 			children = (
 				FC4161421E89A8B100919384 /* Emojuirity.app */,
-				FCCD22F21E8E9345004699DC /* EmojiKeyboard.appex */,
 				FC3CAF771E8F002800D065AA /* EmojuirityTests.xctest */,
 			);
 			name = Products;
@@ -295,15 +273,6 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
-		FCCD22F31E8E9345004699DC /* EmojiKeyboard */ = {
-			isa = PBXGroup;
-			children = (
-				FCCD22F41E8E9345004699DC /* KeyboardViewController.swift */,
-				FCCD22F61E8E9345004699DC /* Info.plist */,
-			);
-			path = EmojiKeyboard;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -343,29 +312,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				FCCD22F81E8E9345004699DC /* PBXTargetDependency */,
 			);
 			name = Emojuirity;
 			productName = HuaweiCliend;
 			productReference = FC4161421E89A8B100919384 /* Emojuirity.app */;
 			productType = "com.apple.product-type.application";
-		};
-		FCCD22F11E8E9345004699DC /* EmojiKeyboard */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FCCD22FA1E8E9345004699DC /* Build configuration list for PBXNativeTarget "EmojiKeyboard" */;
-			buildPhases = (
-				FCCD22EE1E8E9345004699DC /* Sources */,
-				FCCD22EF1E8E9345004699DC /* Frameworks */,
-				FCCD22F01E8E9345004699DC /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = EmojiKeyboard;
-			productName = EmojiKeyboard;
-			productReference = FCCD22F21E8E9345004699DC /* EmojiKeyboard.appex */;
-			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -394,11 +345,6 @@
 							};
 						};
 					};
-					FCCD22F11E8E9345004699DC = {
-						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 5P8935L6RT;
-						ProvisioningStyle = Automatic;
-					};
 				};
 			};
 			buildConfigurationList = FC41613D1E89A8B100919384 /* Build configuration list for PBXProject "Emojuirity" */;
@@ -415,7 +361,6 @@
 			projectRoot = "";
 			targets = (
 				FC4161411E89A8B100919384 /* Emojuirity */,
-				FCCD22F11E8E9345004699DC /* EmojiKeyboard */,
 				FC3CAF761E8F002800D065AA /* EmojuirityTests */,
 			);
 		};
@@ -436,13 +381,6 @@
 				FC4161521E89A8B100919384 /* LaunchScreen.storyboard in Resources */,
 				FCCD22ED1E8E8E82004699DC /* Assets.xcassets in Resources */,
 				FC41614D1E89A8B100919384 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FCCD22F01E8E9345004699DC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -581,14 +519,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FCCD22EE1E8E9345004699DC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FCCD22F51E8E9345004699DC /* KeyboardViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -596,11 +526,6 @@
 			isa = PBXTargetDependency;
 			target = FC4161411E89A8B100919384 /* Emojuirity */;
 			targetProxy = FC3CAF7C1E8F002800D065AA /* PBXContainerItemProxy */;
-		};
-		FCCD22F81E8E9345004699DC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FCCD22F11E8E9345004699DC /* EmojiKeyboard */;
-			targetProxy = FCCD22F71E8E9345004699DC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -694,7 +619,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -738,7 +663,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -751,11 +676,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DED3113D7B71ED7F9A2A6135 /* Pods-Emojuirity.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 5P8935L6RT;
 				INFOPLIST_FILE = HuaweiCliend/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.amin.benarieb.HuaweiCliend;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -768,40 +693,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FB2978F539F69489521CE3E5 /* Pods-Emojuirity.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 5P8935L6RT;
 				INFOPLIST_FILE = HuaweiCliend/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.amin.benarieb.HuaweiCliend;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		FCCD22FB1E8E9345004699DC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEVELOPMENT_TEAM = 5P8935L6RT;
-				INFOPLIST_FILE = EmojiKeyboard/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.amin.benarieb.HuaweiCliend.EmojiKeyboard;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		FCCD22FC1E8E9345004699DC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEVELOPMENT_TEAM = 5P8935L6RT;
-				INFOPLIST_FILE = EmojiKeyboard/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.amin.benarieb.HuaweiCliend.EmojiKeyboard;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -832,15 +731,6 @@
 			buildConfigurations = (
 				FC4161621E89A8B100919384 /* Debug */,
 				FC4161631E89A8B100919384 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FCCD22FA1E8E9345004699DC /* Build configuration list for PBXNativeTarget "EmojiKeyboard" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FCCD22FB1E8E9345004699DC /* Debug */,
-				FCCD22FC1E8E9345004699DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
