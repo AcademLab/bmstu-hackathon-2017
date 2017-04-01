@@ -54,7 +54,16 @@ secondstep/iOSClient/HuaweiCliend.xcworkspace/xcuserdata/aminbenarieb.xcuserdata
 /final/token-api/gradlew
 /final/token-api/gradlew.bat
 /final/token-api/gradle/*
+
 final/iOSClient/HuaweiCliend.xcworkspace/xcuserdata/aminbenarieb.xcuserdatad
 final/iOSClient/Emojuirity.xcodeproj/xcuserdata
 final/iOSClient/Emojuirity.xcworkspace/xcuserdata/aminbenarieb.xcuserdatad/UserInterfaceState.xcuserstate
 final/iOSClient/Emojuirity.xcworkspace/xcuserdata/aminbenarieb.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist
+
+/final/image-api/.idea/*
+/final/image-api/.gradle/*
+/final/image-api/build/*
+/final/image-api/out/*
+/final/image-api/gradlew
+/final/image-api/gradlew.bat
+/final/image-api/gradle/*

@@ -9,6 +9,8 @@ import java.util.HashMap;
 @Service
 public class TokenCache {
 
+    private final long TOKEN_LIVE_TIME = 100;
+
     private HashMap<String, UserInfo> cache;
 
     public TokenCache() {
@@ -16,7 +18,7 @@ public class TokenCache {
     }
 
     public void setUserInfo(Token token, UserInfo userInfo) {
-        cache.putIfAbsent(token.getToken(), userInfo);
+        cache.put(token.getToken(), userInfo);
     }
 
     public UserInfo getUserInfo(Token token) {
