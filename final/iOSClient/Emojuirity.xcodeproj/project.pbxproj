@@ -9,13 +9,15 @@
 /* Begin PBXBuildFile section */
 		4904CDEC576D758CF7F5AAE4 /* Pods_EmojuirityTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFC63C7C7CFB52EF49A50DFC /* Pods_EmojuirityTests.framework */; };
 		EA0322CBF0A6A01553B4A79B /* Pods_Emojuirity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06C7FD0234BCACB74F48031A /* Pods_Emojuirity.framework */; };
-		EF3803BA474A53FA7EFC22F6 /* Pods_HuaweiCliend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 401ABDA457C5238DA6B7B12A /* Pods_HuaweiCliend.framework */; };
 		FC0B635E1E8ECCCE00BA77A8 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0B635D1E8ECCCE00BA77A8 /* Device.swift */; };
 		FC0B63601E8ECD7D00BA77A8 /* Keychainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0B635F1E8ECD7D00BA77A8 /* Keychainer.swift */; };
 		FC3CAF701E8ED8A200D065AA /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3CAF6F1E8ED8A200D065AA /* Application.swift */; };
 		FC3CAF721E8EDC1E00D065AA /* PinCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3CAF711E8EDC1E00D065AA /* PinCodeViewModel.swift */; };
 		FC3CAF831E8F009600D065AA /* Emojurity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3CAF821E8F009600D065AA /* Emojurity.swift */; };
 		FC3CAF851E8F00D900D065AA /* String+Hash.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0B635B1E8EC54800BA77A8 /* String+Hash.swift */; };
+		FC3CAF871E8F301100D065AA /* ImagerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3CAF861E8F301100D065AA /* ImagerModel.swift */; };
+		FC3CAF891E8F35A700D065AA /* ImagerModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3CAF881E8F35A700D065AA /* ImagerModelView.swift */; };
+		FC3CAF8B1E8F3A4300D065AA /* UIImage+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3CAF8A1E8F3A4300D065AA /* UIImage+Base64.swift */; };
 		FC4161461E89A8B100919384 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4161451E89A8B100919384 /* AppDelegate.swift */; };
 		FC41614D1E89A8B100919384 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC41614B1E89A8B100919384 /* Main.storyboard */; };
 		FC4161521E89A8B100919384 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC4161501E89A8B100919384 /* LaunchScreen.storyboard */; };
@@ -34,8 +36,6 @@
 		FC8E6AAB1E8B291500605214 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC8E6AAA1E8B291500605214 /* MapKit.framework */; };
 		FC8E6AB11E8B381A00605214 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8E6AB01E8B381A00605214 /* Theme.swift */; };
 		FCCD22ED1E8E8E82004699DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCCD22EC1E8E8E82004699DC /* Assets.xcassets */; };
-		FCCD22F51E8E9345004699DC /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCD22F41E8E9345004699DC /* KeyboardViewController.swift */; };
-		FCCD22F91E8E9345004699DC /* EmojiKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FCCD22F21E8E9345004699DC /* EmojiKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FCCD23011E8EA82A004699DC /* PinCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCD23001E8EA82A004699DC /* PinCodeViewController.swift */; };
 		FCCD23071E8EB187004699DC /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCD23061E8EB187004699DC /* Int.swift */; };
 /* End PBXBuildFile section */
@@ -48,13 +48,6 @@
 			remoteGlobalIDString = FC4161411E89A8B100919384;
 			remoteInfo = Emojuirity;
 		};
-		FCCD22F71E8E9345004699DC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FC41613A1E89A8B100919384 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FCCD22F11E8E9345004699DC;
-			remoteInfo = EmojiKeyboard;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -64,7 +57,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				FCCD22F91E8E9345004699DC /* EmojiKeyboard.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -91,6 +83,9 @@
 		FC3CAF711E8EDC1E00D065AA /* PinCodeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinCodeViewModel.swift; sourceTree = "<group>"; };
 		FC3CAF771E8F002800D065AA /* EmojuirityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmojuirityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC3CAF821E8F009600D065AA /* Emojurity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Emojurity.swift; sourceTree = "<group>"; };
+		FC3CAF861E8F301100D065AA /* ImagerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagerModel.swift; sourceTree = "<group>"; };
+		FC3CAF881E8F35A700D065AA /* ImagerModelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagerModelView.swift; sourceTree = "<group>"; };
+		FC3CAF8A1E8F3A4300D065AA /* UIImage+Base64.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Base64.swift"; sourceTree = "<group>"; };
 		FC4161421E89A8B100919384 /* Emojuirity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Emojuirity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC4161451E89A8B100919384 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC41614C1E89A8B100919384 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -112,9 +107,6 @@
 		FC8E6AAA1E8B291500605214 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		FC8E6AB01E8B381A00605214 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Theme.swift; path = ../Theme.swift; sourceTree = "<group>"; };
 		FCCD22EC1E8E8E82004699DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FCCD22F21E8E9345004699DC /* EmojiKeyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = EmojiKeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		FCCD22F41E8E9345004699DC /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
-		FCCD22F61E8E9345004699DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCCD23001E8EA82A004699DC /* PinCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinCodeViewController.swift; sourceTree = "<group>"; };
 		FCCD23061E8EB187004699DC /* Int.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -133,15 +125,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC8E6AAB1E8B291500605214 /* MapKit.framework in Frameworks */,
-				EF3803BA474A53FA7EFC22F6 /* Pods_HuaweiCliend.framework in Frameworks */,
 				EA0322CBF0A6A01553B4A79B /* Pods_Emojuirity.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FCCD22EF1E8E9345004699DC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,7 +164,6 @@
 			children = (
 				FC4161441E89A8B100919384 /* Emojuirity */,
 				FC41615B1E89A8B100919384 /* EmojuirityTests */,
-				FCCD22F31E8E9345004699DC /* EmojiKeyboard */,
 				FC4161431E89A8B100919384 /* Products */,
 				9F4C48FE5A522DD94E18E14E /* Pods */,
 				E85B4F14C6595F0ABD86C383 /* Frameworks */,
@@ -191,7 +174,6 @@
 			isa = PBXGroup;
 			children = (
 				FC4161421E89A8B100919384 /* Emojuirity.app */,
-				FCCD22F21E8E9345004699DC /* EmojiKeyboard.appex */,
 				FC3CAF771E8F002800D065AA /* EmojuirityTests.xctest */,
 			);
 			name = Products;
@@ -205,8 +187,8 @@
 				FC8E6A9F1E8B079600605214 /* Views */,
 				FC8E6A831E8AC7DB00605214 /* ViewControllers */,
 				FC4161771E89BE2D00919384 /* ViewModels */,
-				FC4161721E89B65A00919384 /* Services */,
 				FC4161731E89B66400919384 /* Models */,
+				FC4161721E89B65A00919384 /* Services */,
 				FC8E6A8E1E8AD38600605214 /* Extensions */,
 				FC41614B1E89A8B100919384 /* Main.storyboard */,
 				FC4161501E89A8B100919384 /* LaunchScreen.storyboard */,
@@ -243,6 +225,7 @@
 			children = (
 				FC41617C1E89C0C000919384 /* SignInModel.swift */,
 				FC4161741E89B67B00919384 /* UserProfile.swift */,
+				FC3CAF861E8F301100D065AA /* ImagerModel.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -252,6 +235,7 @@
 			children = (
 				FC41617A1E89C06900919384 /* SignInViewModel.swift */,
 				FC3CAF711E8EDC1E00D065AA /* PinCodeViewModel.swift */,
+				FC3CAF881E8F35A700D065AA /* ImagerModelView.swift */,
 				FC8E6A841E8AC80700605214 /* UserProfileViewModel.swift */,
 			);
 			name = ViewModels;
@@ -273,6 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				FC3CAF6F1E8ED8A200D065AA /* Application.swift */,
+				FC3CAF8A1E8F3A4300D065AA /* UIImage+Base64.swift */,
 				FC8E6A991E8AEF0F00605214 /* UIViewController.swift */,
 				FC8E6A911E8AD78500605214 /* NSObject.swift */,
 				FCCD23061E8EB187004699DC /* Int.swift */,
@@ -286,15 +271,6 @@
 			children = (
 			);
 			name = Views;
-			sourceTree = "<group>";
-		};
-		FCCD22F31E8E9345004699DC /* EmojiKeyboard */ = {
-			isa = PBXGroup;
-			children = (
-				FCCD22F41E8E9345004699DC /* KeyboardViewController.swift */,
-				FCCD22F61E8E9345004699DC /* Info.plist */,
-			);
-			path = EmojiKeyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,29 +312,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				FCCD22F81E8E9345004699DC /* PBXTargetDependency */,
 			);
 			name = Emojuirity;
 			productName = HuaweiCliend;
 			productReference = FC4161421E89A8B100919384 /* Emojuirity.app */;
 			productType = "com.apple.product-type.application";
-		};
-		FCCD22F11E8E9345004699DC /* EmojiKeyboard */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FCCD22FA1E8E9345004699DC /* Build configuration list for PBXNativeTarget "EmojiKeyboard" */;
-			buildPhases = (
-				FCCD22EE1E8E9345004699DC /* Sources */,
-				FCCD22EF1E8E9345004699DC /* Frameworks */,
-				FCCD22F01E8E9345004699DC /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = EmojiKeyboard;
-			productName = EmojiKeyboard;
-			productReference = FCCD22F21E8E9345004699DC /* EmojiKeyboard.appex */;
-			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -387,11 +345,6 @@
 							};
 						};
 					};
-					FCCD22F11E8E9345004699DC = {
-						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 5P8935L6RT;
-						ProvisioningStyle = Automatic;
-					};
 				};
 			};
 			buildConfigurationList = FC41613D1E89A8B100919384 /* Build configuration list for PBXProject "Emojuirity" */;
@@ -408,7 +361,6 @@
 			projectRoot = "";
 			targets = (
 				FC4161411E89A8B100919384 /* Emojuirity */,
-				FCCD22F11E8E9345004699DC /* EmojiKeyboard */,
 				FC3CAF761E8F002800D065AA /* EmojuirityTests */,
 			);
 		};
@@ -429,13 +381,6 @@
 				FC4161521E89A8B100919384 /* LaunchScreen.storyboard in Resources */,
 				FCCD22ED1E8E8E82004699DC /* Assets.xcassets in Resources */,
 				FC41614D1E89A8B100919384 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FCCD22F01E8E9345004699DC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,8 +497,10 @@
 				FC41616D1E89B02F00919384 /* Network.swift in Sources */,
 				FCCD23071E8EB187004699DC /* Int.swift in Sources */,
 				FC0B635E1E8ECCCE00BA77A8 /* Device.swift in Sources */,
+				FC3CAF891E8F35A700D065AA /* ImagerModelView.swift in Sources */,
 				FC8E6A9A1E8AEF0F00605214 /* UIViewController.swift in Sources */,
 				FC41617B1E89C06900919384 /* SignInViewModel.swift in Sources */,
+				FC3CAF8B1E8F3A4300D065AA /* UIImage+Base64.swift in Sources */,
 				FC8E6A981E8AD86700605214 /* TabBarViewController.swift in Sources */,
 				FC8E6A921E8AD78500605214 /* NSObject.swift in Sources */,
 				FC8E6A851E8AC80700605214 /* UserProfileViewModel.swift in Sources */,
@@ -563,19 +510,12 @@
 				FC4161751E89B67B00919384 /* UserProfile.swift in Sources */,
 				FC0B63601E8ECD7D00BA77A8 /* Keychainer.swift in Sources */,
 				FC4161851E89E30200919384 /* UserProfileViewController.swift in Sources */,
+				FC3CAF871E8F301100D065AA /* ImagerModel.swift in Sources */,
 				FCCD23011E8EA82A004699DC /* PinCodeViewController.swift in Sources */,
 				FC3CAF851E8F00D900D065AA /* String+Hash.swift in Sources */,
 				FC8E6A901E8AD39200605214 /* AcademViewController.swift in Sources */,
 				FC4161711E89B42800919384 /* SignViewController.swift in Sources */,
 				FC3CAF721E8EDC1E00D065AA /* PinCodeViewModel.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FCCD22EE1E8E9345004699DC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FCCD22F51E8E9345004699DC /* KeyboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -586,11 +526,6 @@
 			isa = PBXTargetDependency;
 			target = FC4161411E89A8B100919384 /* Emojuirity */;
 			targetProxy = FC3CAF7C1E8F002800D065AA /* PBXContainerItemProxy */;
-		};
-		FCCD22F81E8E9345004699DC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FCCD22F11E8E9345004699DC /* EmojiKeyboard */;
-			targetProxy = FCCD22F71E8E9345004699DC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -684,7 +619,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -728,7 +663,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -741,15 +676,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DED3113D7B71ED7F9A2A6135 /* Pods-Emojuirity.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 5P8935L6RT;
 				INFOPLIST_FILE = HuaweiCliend/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.amin.benarieb.HuaweiCliend;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -758,40 +693,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FB2978F539F69489521CE3E5 /* Pods-Emojuirity.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 5P8935L6RT;
 				INFOPLIST_FILE = HuaweiCliend/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.amin.benarieb.HuaweiCliend;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		FCCD22FB1E8E9345004699DC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEVELOPMENT_TEAM = 5P8935L6RT;
-				INFOPLIST_FILE = EmojiKeyboard/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.amin.benarieb.HuaweiCliend.EmojiKeyboard;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		FCCD22FC1E8E9345004699DC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEVELOPMENT_TEAM = 5P8935L6RT;
-				INFOPLIST_FILE = EmojiKeyboard/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.amin.benarieb.HuaweiCliend.EmojiKeyboard;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -822,15 +731,6 @@
 			buildConfigurations = (
 				FC4161621E89A8B100919384 /* Debug */,
 				FC4161631E89A8B100919384 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FCCD22FA1E8E9345004699DC /* Build configuration list for PBXNativeTarget "EmojiKeyboard" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FCCD22FB1E8E9345004699DC /* Debug */,
-				FCCD22FC1E8E9345004699DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

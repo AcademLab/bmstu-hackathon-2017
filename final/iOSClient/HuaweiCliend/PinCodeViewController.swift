@@ -151,5 +151,17 @@ class PinCodeViewController: AcademViewController, PinCodeViewModelDelegate {
 		
 		pincodeTextField.text = String(pincodeTextFieldText.characters.dropLast())
 	}
+	
+	override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+		guard let event = event else {
+			return
+		}
+
+		if ( event.subtype == .motionShake) {
+			try? ALUserProfileModel.clearData()
+			viewModel = ALPinCodeViewModel(model: ALUserProfileModel())
+			self.title = viewModel?.title
+		}
+	}
 
 }

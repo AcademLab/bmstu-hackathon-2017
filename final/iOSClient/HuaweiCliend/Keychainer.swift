@@ -27,10 +27,6 @@ class ALKeychainer : Keychainer {
 			password = password.encoded()
 		}
 	}
-	var token : String = "" {
-		didSet {
-			token = token.encoded()
-		}
-	}
+	var token : String = ""
 	
 }

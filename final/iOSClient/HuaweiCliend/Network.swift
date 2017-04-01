@@ -17,11 +17,12 @@ enum NetworkError {
 	case failedRequest
 	case unknown
 	case unreachable
+	case notFound
 }
 
 class Network : NSObject, URLSessionDelegate {
 
-	func sendRequest(url : String, jsonData : Data, completion : @escaping NetworkCompletion) {
+	func sendRequest(url : String, jsonData : Data, token : String? = nil, completion : @escaping NetworkCompletion) {
 		
 		guard let url = URL(string: url) else {
 			completion(nil, .invalidRequest)
@@ -37,6 +38,9 @@ class Network : NSObject, URLSessionDelegate {
 		request.httpBody = jsonData
 		request.addValue("application/json", forHTTPHeaderField: "Content-Type")
 		request.addValue("application/json", forHTTPHeaderField: "Accept")
+		if let token = token {
+			request.addValue(token, forHTTPHeaderField: "X-Auth-Token")
+		}
 		let task = defaultSession.dataTask(with: request) { data, response, error in
 			guard let data = data else {
 				completion(nil, .unreachable)
@@ -64,16 +68,26 @@ class Network : NSObject, URLSessionDelegate {
 		}
 		task.resume()
 	}
-	static func sendRequest(url : String, completion : @escaping NetworkCompletion) {
+	func sendRequest(url : String, token : String? = nil, completion : @escaping NetworkCompletion) {
 		guard let url = URL(string: url) else {
 			completion(nil, .invalidRequest)
 			return
 		}
+		
+		
+		let defaultConfigObject = URLSessionConfiguration.default
+		let defaultSession = URLSession(configuration: defaultConfigObject,
+		                                delegate: self,
+		                                delegateQueue: OperationQueue.main)
+		
 		var request = URLRequest(url: url)
 		request.httpMethod = "GET"
 		request.addValue("application/json", forHTTPHeaderField: "Content-Type")
 		request.addValue("application/json", forHTTPHeaderField: "Accept")
-		let task = URLSession.shared.dataTask(with: request) { data, response, error in
+		if let token = token {
+			request.addValue(token, forHTTPHeaderField: "X-Auth-Token")
+		}
+		let task = defaultSession.dataTask(with: request) { data, response, error in
 			guard let data = data else {
 				completion(nil, .unreachable)
 				return
@@ -89,6 +103,8 @@ class Network : NSObject, URLSessionDelegate {
 				switch(httpStatus?.statusCode ?? 0){
 				case 401:
 					completion(nil, .unauthorized)
+				case 404:
+					completion(nil, .notFound)
 				default:
 					completion(nil, .unknown)
 				}
