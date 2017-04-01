@@ -57,5 +57,9 @@
 	<string></string>
 	<key>NSCameraUsageDescription</key>
 	<string>Emojiurity app uses your photo to make you life happier 😉 </string>
+
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Emojiurity app uses your photo library to make you life happier 😉 </string>
+	
 </dict>
 </plist>

@@ -24,18 +24,14 @@ class UserProfileViewController: AcademViewController, ImagerViewModelDelegate {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		self.imageView.image = #imageLiteral(resourceName: "test")
-		
 		ALRouter.sharedInstance.showAuth()
 		cameraManager.cameraOutputQuality = .low
-		cameraManager.capturePictureWithCompletion({
-			[unowned self] (image, error) -> Void in
-			self.imageView.image = image
-		})
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
+		
+		viewModel?.didRequestImage()
 	}
 	
 	override func setup() {
@@ -55,8 +51,13 @@ class UserProfileViewController: AcademViewController, ImagerViewModelDelegate {
 			return
 		}
 		
-		cameraManager.stopCaptureSession()
-		viewModel?.didSendImage(self.imageView.image?.base64())
+		cameraManager.capturePictureWithCompletion({
+			[unowned self] (image, error) -> Void in
+			self.imageView.image = image
+			self.viewModel?.didSendImage(self.imageView.image?.base64())
+			self.cameraManager.stopCaptureSession()
+			self.cameraManager.captureSession = nil
+		})
 		
 	}
 	@IBAction func didTapOnGetPhoto(_ sender: Any) {
@@ -65,18 +66,13 @@ class UserProfileViewController: AcademViewController, ImagerViewModelDelegate {
 	// MARK: ImagerViewModelDelegate
 	
 	func didSuccess(withImage image: String) {
-		cameraManager.captureSession = nil
-		cameraManager.stopAndRemoveCaptureSession()
 		self.imageView.layer.sublayers?.removeLast()
-		
 		self.imageView.image = image.base64()
 	}
 	
 	func didFailImageSending(errorMsg: String) {
 		showMessage(errorMsg)
 	}
-	
-	
 	
 
 }

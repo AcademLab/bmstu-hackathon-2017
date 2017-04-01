@@ -75,29 +75,28 @@ class ALImagerModel : ImagerModel {
 	}
 	func getImage(_ token : String, completion : @escaping ImagerModelCompletion) {
 		let getImagehUrl = url(forKey: kImageGetKey)
-		Network().sendRequest(url: getImagehUrl, token: token) { (data, error) -> (Void) in
+		Network().sendRequest(url: getImagehUrl, token: token) { (JSONData, error) -> (Void) in
 			
-//			guard let JSONData = JSONData else {
-//				completion(.none, .unreachable )
-//				return
-//			}
-//			
-//			if let error = error {
-//				completion(.none, .networkError(errMsg, error ))
-//				return
-//			}
-//			
-//			
-//			let json = JSON(JSONData)
-//			let errMsg = json[kMsgKey].string ?? ""
-//			
-//			
-//			guard let image = json[kImageKey].string else {
-//				completion(.none, .networkError(errMsg, .invalidRequest) )
-//				return
-//			}
-//			
-//			completion(image, nil)
+			guard let JSONData = JSONData else {
+				completion(.none, .unreachable )
+				return
+			}
+			
+			
+			let json = JSON(JSONData)
+			let errMsg = json[kMsgKey].string ?? ""
+			
+			if let error = error {
+				completion(.none, .networkError(errMsg, error ))
+				return
+			}
+			
+			guard let image = json[kImageKey].string else {
+				completion(.none, .networkError(errMsg, .invalidRequest) )
+				return
+			}
+			
+			completion(image, nil)
 		}
 	}
 	

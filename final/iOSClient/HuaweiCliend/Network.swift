@@ -72,11 +72,21 @@ class Network : NSObject, URLSessionDelegate {
 			completion(nil, .invalidRequest)
 			return
 		}
+		
+		
+		let defaultConfigObject = URLSessionConfiguration.default
+		let defaultSession = URLSession(configuration: defaultConfigObject,
+		                                delegate: self,
+		                                delegateQueue: OperationQueue.main)
+		
 		var request = URLRequest(url: url)
 		request.httpMethod = "GET"
 		request.addValue("application/json", forHTTPHeaderField: "Content-Type")
 		request.addValue("application/json", forHTTPHeaderField: "Accept")
-		let task = URLSession.shared.dataTask(with: request) { data, response, error in
+		if let token = token {
+			request.addValue(token, forHTTPHeaderField: "X-Auth-Token")
+		}
+		let task = defaultSession.dataTask(with: request) { data, response, error in
 			guard let data = data else {
 				completion(nil, .unreachable)
 				return

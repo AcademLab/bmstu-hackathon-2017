@@ -10,6 +10,7 @@ import Foundation
 
 protocol ImagerViewModel {
 	func didSendImage( _ image : String?)
+	func didRequestImage()
 	weak var delegate : ImagerViewModelDelegate? { get set }
 }
 
@@ -54,6 +55,32 @@ class ALImagerViewModel : ImagerViewModel{
 			self.delegate?.didSuccess(withImage: image)
 		}
 	}
+	
+	
+	func didRequestImage() {
+		guard let pincodeData = userInfo.pinCode(),
+			let pincode = try? pincodeData.decryptedByIMEI(),
+			let tokenData =  userInfo.token(),
+			let token = try? tokenData.decrypted(byPinCode: pincode ) else {
+				return
+		}
+		
+		model.getImage(token) {
+			[unowned self] (image, error) -> (Void) in
+			if let error = error {
+				self.delegate?.didFailImageSending(errorMsg: ALImagerViewModel.string(from: error))
+				return
+			}
+			
+			guard let image = image else {
+				self.delegate?.didFailImageSending(errorMsg: ALImagerViewModel.string(from: ImagerModelError.unknown))
+				return
+			}
+			
+			self.delegate?.didSuccess(withImage: image)
+		}
+	}
+	
 	
 	// MARK: Fileprivate
 	
