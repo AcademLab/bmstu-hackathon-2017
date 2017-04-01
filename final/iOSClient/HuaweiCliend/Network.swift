@@ -21,7 +21,7 @@ enum NetworkError {
 
 class Network : NSObject, URLSessionDelegate {
 
-	func sendRequest(url : String, jsonData : Data, completion : @escaping NetworkCompletion) {
+	func sendRequest(url : String, jsonData : Data, token : String? = nil, completion : @escaping NetworkCompletion) {
 		
 		guard let url = URL(string: url) else {
 			completion(nil, .invalidRequest)
@@ -37,6 +37,9 @@ class Network : NSObject, URLSessionDelegate {
 		request.httpBody = jsonData
 		request.addValue("application/json", forHTTPHeaderField: "Content-Type")
 		request.addValue("application/json", forHTTPHeaderField: "Accept")
+		if let token = token {
+			request.addValue(token, forHTTPHeaderField: "X-Auth-Token")
+		}
 		let task = defaultSession.dataTask(with: request) { data, response, error in
 			guard let data = data else {
 				completion(nil, .unreachable)
@@ -64,7 +67,7 @@ class Network : NSObject, URLSessionDelegate {
 		}
 		task.resume()
 	}
-	static func sendRequest(url : String, completion : @escaping NetworkCompletion) {
+	func sendRequest(url : String, token : String? = nil, completion : @escaping NetworkCompletion) {
 		guard let url = URL(string: url) else {
 			completion(nil, .invalidRequest)
 			return
