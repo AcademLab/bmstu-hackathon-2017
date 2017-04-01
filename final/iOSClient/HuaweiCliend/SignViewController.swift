@@ -32,6 +32,14 @@ class SignViewController: AcademViewController, UITextFieldDelegate, SignInViewM
 		super.setup()
 		self.viewModel = AcademSignInViewModel(model: AcademSignInModel())
 		self.viewModel?.delegate = self
+		
+		let color = UIColor( red: 0.988, green: 0.820, blue:0.271, alpha: 1.0 )
+		
+		loginField.layer.borderColor = color.cgColor
+		loginField.layer.borderWidth = 4
+		
+		passwordField.layer.borderColor = color.cgColor
+		passwordField.layer.borderWidth = 4
 	}
 	
 	// MARK : Actions
