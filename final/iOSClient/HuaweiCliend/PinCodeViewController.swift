@@ -127,6 +127,7 @@ class PinCodeViewController: AcademViewController, PinCodeViewModelDelegate {
 	
 	func didFailPincodeVerification(withErrMsg errMsg: String) {
 		showMessage(errMsg)
+		pincodeTextField.text = ""
 	}
 	
     // MARK: Actions
