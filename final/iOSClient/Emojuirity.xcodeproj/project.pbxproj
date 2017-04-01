@@ -16,6 +16,7 @@
 		FC3CAF721E8EDC1E00D065AA /* PinCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3CAF711E8EDC1E00D065AA /* PinCodeViewModel.swift */; };
 		FC3CAF831E8F009600D065AA /* Emojurity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3CAF821E8F009600D065AA /* Emojurity.swift */; };
 		FC3CAF851E8F00D900D065AA /* String+Hash.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0B635B1E8EC54800BA77A8 /* String+Hash.swift */; };
+		FC3CAF8B1E8F3A4300D065AA /* UIImage+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3CAF8A1E8F3A4300D065AA /* UIImage+Base64.swift */; };
 		FC4161461E89A8B100919384 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4161451E89A8B100919384 /* AppDelegate.swift */; };
 		FC41614D1E89A8B100919384 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC41614B1E89A8B100919384 /* Main.storyboard */; };
 		FC4161521E89A8B100919384 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC4161501E89A8B100919384 /* LaunchScreen.storyboard */; };
@@ -91,6 +92,7 @@
 		FC3CAF711E8EDC1E00D065AA /* PinCodeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinCodeViewModel.swift; sourceTree = "<group>"; };
 		FC3CAF771E8F002800D065AA /* EmojuirityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmojuirityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC3CAF821E8F009600D065AA /* Emojurity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Emojurity.swift; sourceTree = "<group>"; };
+		FC3CAF8A1E8F3A4300D065AA /* UIImage+Base64.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Base64.swift"; sourceTree = "<group>"; };
 		FC4161421E89A8B100919384 /* Emojuirity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Emojuirity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC4161451E89A8B100919384 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC41614C1E89A8B100919384 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 			children = (
 				FC41617C1E89C0C000919384 /* SignInModel.swift */,
 				FC4161741E89B67B00919384 /* UserProfile.swift */,
+				FC3CAF861E8F301100D065AA /* ImagerModel.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				FC3CAF6F1E8ED8A200D065AA /* Application.swift */,
+				FC3CAF8A1E8F3A4300D065AA /* UIImage+Base64.swift */,
 				FC8E6A991E8AEF0F00605214 /* UIViewController.swift */,
 				FC8E6A911E8AD78500605214 /* NSObject.swift */,
 				FCCD23061E8EB187004699DC /* Int.swift */,
@@ -554,6 +558,7 @@
 				FC0B635E1E8ECCCE00BA77A8 /* Device.swift in Sources */,
 				FC8E6A9A1E8AEF0F00605214 /* UIViewController.swift in Sources */,
 				FC41617B1E89C06900919384 /* SignInViewModel.swift in Sources */,
+				FC3CAF8B1E8F3A4300D065AA /* UIImage+Base64.swift in Sources */,
 				FC8E6A981E8AD86700605214 /* TabBarViewController.swift in Sources */,
 				FC8E6A921E8AD78500605214 /* NSObject.swift in Sources */,
 				FC8E6A851E8AC80700605214 /* UserProfileViewModel.swift in Sources */,
