@@ -17,6 +17,7 @@ enum NetworkError {
 	case failedRequest
 	case unknown
 	case unreachable
+	case notFound
 }
 
 class Network : NSObject, URLSessionDelegate {
@@ -102,6 +103,8 @@ class Network : NSObject, URLSessionDelegate {
 				switch(httpStatus?.statusCode ?? 0){
 				case 401:
 					completion(nil, .unauthorized)
+				case 404:
+					completion(nil, .notFound)
 				default:
 					completion(nil, .unknown)
 				}

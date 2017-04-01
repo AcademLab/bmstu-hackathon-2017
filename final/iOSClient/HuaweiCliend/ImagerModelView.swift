@@ -108,6 +108,8 @@ class ALImagerViewModel : ImagerViewModel{
 			return "Network is unreachable."
 		case NetworkError.invalidRequest:
 			return "Invalid request."
+		case NetworkError.notFound:
+			return "Image not found"
 		default:
 			return "Unknwon network error"
 		}
