@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import CameraManager
+import DKCamera
 
 class UserProfileViewController: AcademViewController, ImagerViewModelDelegate {
 	
@@ -17,7 +17,7 @@ class UserProfileViewController: AcademViewController, ImagerViewModelDelegate {
 	@IBOutlet weak var deviceLabel: UILabel!
 	@IBOutlet weak var imageView: UIImageView!
 	
-	let cameraManager = CameraManager()
+	let camera = DKCamera()
 	
 	var viewModel : ImagerViewModel? = ALImagerViewModel(model: ALImagerModel())
 	
@@ -25,7 +25,6 @@ class UserProfileViewController: AcademViewController, ImagerViewModelDelegate {
 		super.viewDidLoad()
 		
 		ALRouter.sharedInstance.showAuth()
-		cameraManager.cameraOutputQuality = .low
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
@@ -37,6 +36,15 @@ class UserProfileViewController: AcademViewController, ImagerViewModelDelegate {
 	override func setup() {
 		self.title = "User Profile"
 		viewModel?.delegate = self
+		
+		camera.didCancel = { () in
+			self.dismiss(animated: true, completion: nil)
+		}
+		
+		camera.didFinishCapturingImage = {(image: UIImage) in
+			self.viewModel?.didSendImage(image.base64())
+			self.dismiss(animated: true, completion: nil)
+		}
 	}
 	
 	// MARK: Preload image from server
@@ -44,29 +52,19 @@ class UserProfileViewController: AcademViewController, ImagerViewModelDelegate {
 	// MARK: Actions
 	
 	@IBAction func didTapOnSendPhoto(_ sender: Any) {
-		guard cameraManager.captureSession != nil else {
-			cameraManager.cameraDevice = .front
-			_ = cameraManager.addPreviewLayerToView(imageView)
-			
-			return
-		}
 		
-		cameraManager.capturePictureWithCompletion({
-			[unowned self] (image, error) -> Void in
-			self.imageView.image = image
-			self.viewModel?.didSendImage(self.imageView.image?.base64())
-			self.cameraManager.stopCaptureSession()
-			self.cameraManager.captureSession = nil
-		})
+
+		self.present(camera, animated: true, completion: nil)
+		
 		
 	}
 	@IBAction func didTapOnGetPhoto(_ sender: Any) {
+		viewModel?.didRequestImage()
 	}
 
 	// MARK: ImagerViewModelDelegate
 	
 	func didSuccess(withImage image: String) {
-		self.imageView.layer.sublayers?.removeLast()
 		self.imageView.image = image.base64()
 	}
 	

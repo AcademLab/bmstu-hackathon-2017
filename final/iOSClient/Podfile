@@ -12,7 +12,7 @@ target 'Emojuirity' do
   pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
   pod 'SwiftHash', git: 'https://github.com/onmyway133/SwiftHash'
   pod 'RNCryptor', '~> 5.0'
-  pod 'CameraManager', '~> 3.1'
+  pod 'DKCamera'
 
   target 'EmojuirityTests' do
     inherit! :search_paths

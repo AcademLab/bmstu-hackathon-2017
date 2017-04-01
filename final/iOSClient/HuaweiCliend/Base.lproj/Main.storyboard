@@ -371,7 +371,7 @@
                         <viewControllerLayoutGuide type="bottom" id="apR-nL-eU8"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="gQU-Hl-zi8">
-                        <rect key="frame" x="0.0" y="64" width="375" height="487"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="🙈 SUPER  CLASSIFIED  INFORMATION" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EtP-Ky-jsZ">
@@ -381,8 +381,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tKF-mQ-xsB">
-                                <rect key="frame" x="16" y="20" width="343" height="314"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tKF-mQ-xsB">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="340"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vs2-nx-FMD">
@@ -430,12 +430,12 @@
         <!--Profile-->
         <scene sceneID="QKo-Q1-U7a">
             <objects>
-                <navigationController id="xMv-8t-05Q" sceneMemberID="viewController">
+                <navigationController extendedLayoutIncludesOpaqueBars="YES" id="xMv-8t-05Q" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Profile" image="user" id="2jE-wF-psD"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="200"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="wu0-7z-a50">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wu0-7z-a50">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.96470588239999999" green="0.36470588240000001" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
