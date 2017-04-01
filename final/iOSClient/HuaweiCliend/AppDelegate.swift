@@ -27,8 +27,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 			return
 		}
 		ALRouter.sharedInstance.tabbarController = tabVC
-		
-//		try? ALUserProfileModel.clearData()
 	}
 	
 }
